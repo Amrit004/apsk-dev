@@ -85,22 +85,17 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative w-72 h-72 lg:w-96 lg:h-96 mx-auto">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500 to-purple-500 opacity-20 animate-pulse" />
-              <div className="absolute inset-4 rounded-full bg-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl lg:text-8xl font-bold gradient-text mb-2">18</div>
-                  <div className="text-slate-400 text-sm">GitHub Repos</div>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 glass-card rounded-2xl p-4 animate-float">
-                <div className="text-2xl font-bold text-cyan-400">MSc</div>
-                <div className="text-xs text-slate-400">QMUL 2026</div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="text-2xl font-bold text-purple-400">5</div>
-                <div className="text-xs text-slate-400">Languages</div>
-              </div>
+            <div className="glass-card rounded-2xl p-4">
+              <img 
+                src="https://github-readme-stats.vercel.app/api?username=Amrit004&theme=react&hide_border=true&bg_color=0f172a&title_color=06b6d4&text_color=94a3b8&icon_color=8b5cf6" 
+                alt="GitHub Stats"
+                className="w-full max-w-md mx-auto rounded-xl"
+              />
+              <img 
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amrit004&theme=react&hide_border=true&bg_color=0f172a&title_color=06b6d4&text_color=94a3b8&icon_color=8b5cf6&layout=compact" 
+                alt="Top Languages"
+                className="w-full max-w-md mx-auto mt-4 rounded-xl"
+              />
             </div>
           </motion.div>
         </div>
