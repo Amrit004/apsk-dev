@@ -85,17 +85,28 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="glass-card rounded-2xl p-4">
-              <img 
-                src="https://github-readme-stats.vercel.app/api?username=Amrit004&theme=react&hide_border=true&bg_color=0f172a&title_color=06b6d4&text_color=94a3b8&icon_color=8b5cf6" 
-                alt="GitHub Stats"
-                className="w-full max-w-md mx-auto rounded-xl"
-              />
-              <img 
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amrit004&theme=react&hide_border=true&bg_color=0f172a&title_color=06b6d4&text_color=94a3b8&icon_color=8b5cf6&layout=compact" 
-                alt="Top Languages"
-                className="w-full max-w-md mx-auto mt-4 rounded-xl"
-              />
+            <div className="glass-card rounded-2xl p-6 text-center">
+              <div className="text-6xl lg:text-7xl font-bold gradient-text mb-2">18</div>
+              <div className="text-slate-400 text-lg mb-6">GitHub Repositories</div>
+              
+              <div className="grid grid-cols-2 gap-4 text-left">
+                <div className="bg-slate-800/50 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-cyan-400">JavaScript</div>
+                  <div className="text-slate-400 text-sm">40%</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-purple-400">TypeScript</div>
+                  <div className="text-slate-400 text-sm">25%</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-green-400">Python</div>
+                  <div className="text-slate-400 text-sm">20%</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-yellow-400">Java</div>
+                  <div className="text-slate-400 text-sm">15%</div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
