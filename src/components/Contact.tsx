@@ -1,21 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, MapPin, Send, Check } from "lucide-react";
 
 export default function Contact() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
-    const mailtoLink = `mailto:sharysingh1144@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    window.location.href = mailtoLink;
-    setFormSubmitted(true);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+    
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    
+    window.open(`mailto:sharysingh1144@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
   return (
     <section id="contact" className="py-24">
