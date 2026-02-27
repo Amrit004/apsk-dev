@@ -45,7 +45,7 @@ export default function Hero() {
                 Get In Touch <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://drive.google.com/uc?export=download&id=1VfCC2Y9I_zv0suHdfMdsyy_dlBhBvNOC"
+                href="https://drive.google.com/uc?export=download&id=1ZHsoCGm7w2DQfw8XGu648o_2fotxtFd7"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
               >
