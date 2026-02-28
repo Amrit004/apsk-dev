@@ -4,6 +4,7 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Seeking from "@/components/Seeking";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -21,8 +22,9 @@ export default function Home() {
       <About />
       <Education />
       <Experience />
-      <Projects />
       <Skills />
+      <Seeking />
+      <Projects />
       <Contact />
     </main>
   );

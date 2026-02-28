@@ -18,19 +18,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-16">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-3">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Looking for a driven graduate who is comfortable in enterprise environments and eager to write real software? Let us talk.
+          <p className="text-slate-400 max-w-xl mx-auto">
+            Looking for a driven graduate? Let's talk.
           </p>
         </motion.div>
 

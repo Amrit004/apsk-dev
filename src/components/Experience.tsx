@@ -45,23 +45,23 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-16">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-3">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Hands-on IT and technology roles in regulated, enterprise environments — giving me real-world context that most graduates lack.
+          <p className="text-slate-400 max-w-xl mx-auto">
+            Hands-on IT and technology roles in regulated, enterprise environments.
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="space-y-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.company}
@@ -69,36 +69,36 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card rounded-2xl p-8 hover:border-cyan-500/30 transition-colors"
+              className="glass-card rounded-xl p-5 hover:border-cyan-500/30 transition-colors"
             >
-              <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Building2 className="w-6 h-6 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.company}</h3>
+                  <div className="flex items-center gap-2 mb-1">
+                    <Building2 className="w-5 h-5 text-cyan-400" />
+                    <h3 className="text-lg font-bold text-white">{exp.company}</h3>
                   </div>
-                  <p className="text-cyan-400 font-medium">{exp.role}</p>
+                  <p className="text-cyan-400 text-sm">{exp.role}</p>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
-                    <Calendar className="w-4 h-4" />
+                  <div className="flex items-center gap-1 text-slate-500 text-xs">
+                    <Calendar className="w-3 h-3" />
                     {exp.period}
                   </div>
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mt-1">
-                    <MapPin className="w-4 h-4" />
+                  <div className="flex items-center gap-1 text-slate-500 text-xs mt-0.5">
+                    <MapPin className="w-3 h-3" />
                     {exp.location}
                   </div>
                 </div>
               </div>
               
-              <span className="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs mb-4">
+              <span className="inline-block px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 text-xs mb-3">
                 {exp.type}
               </span>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {exp.description.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-400">
-                    <span className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                  <li key={i} className="flex items-start gap-2 text-slate-400 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
