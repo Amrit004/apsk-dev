@@ -103,7 +103,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="relative hidden lg:block"
+            className="relative hidden md:block mt-6 md:mt-0"
           >
             <div className="glass-card rounded-xl p-5 text-center gradient-border">
               <div className="text-5xl font-bold gradient-text mb-1">23</div>
