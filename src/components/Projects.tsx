@@ -223,7 +223,7 @@ export default function Projects() {
               className="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={`h-48 bg-gradient-to-br ${selectedProject.color justify-center relative`} flex items-center}>
+              <div className={`h-48 bg-gradient-to-br ${selectedProject.color} flex items-center justify-center relative`}>
                 <selectedProject.icon className="w-20 h-20 text-white opacity-90" />
                 <button
                   onClick={() => setSelectedProject(null)}
