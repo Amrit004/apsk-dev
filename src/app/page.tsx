@@ -6,12 +6,18 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
+import ScrollProgress from "@/components/ScrollProgress";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function Home() {
   return (
-    <main id="main-content" role="main" className="min-h-screen bg-slate-950">
+    <main id="main-content" role="main" className="min-h-screen">
+      <LoadingSpinner />
+      <ScrollProgress />
       <Navigation />
       <Hero />
+      <ScrollIndicator />
       <About />
       <Education />
       <Experience />

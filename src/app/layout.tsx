@@ -5,19 +5,39 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "Amritpal Singh Kaur | Graduate Software Engineer",
   description: "Multilingual Graduate Software Engineer with enterprise experience at Bank of America, Amadeus & ENI. MSc Advanced CS at QMUL. Open to work Summer 2026.",
-  keywords: ["Software Engineer", "Graduate Developer", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "Full Stack", "Cloud", "Cybersecurity"],
+  keywords: ["Software Engineer", "Graduate Developer", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "Full Stack", "Cloud", "Cybersecurity", "React", "Next.js", "Python", "Java"],
   authors: [{ name: "Amritpal Singh Kaur" }],
+  creator: "Amritpal Singh Kaur",
+  publisher: "Amritpal Singh Kaur",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
   openGraph: {
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
     description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc candidate in Advanced CS.",
-    type: "website",
+    url: "https://apsk-dev.vercel.app",
+    siteName: "APSK Portfolio",
     locale: "en_GB",
-    url: "https://apsk-portfolio.vercel.app",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
     description: "Multilingual Graduate Software Engineer - Open to Work Summer 2026",
+    creator: "@Amrit004",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -29,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
-        <link rel="canonical" href="https://apsk-portfolio.vercel.app" />
+        <link rel="canonical" href="https://apsk-dev.vercel.app" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
@@ -39,7 +59,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Amritpal Singh Kaur",
-              "url": "https://apsk-portfolio.vercel.app",
+              "url": "https://apsk-dev.vercel.app",
               "jobTitle": "Graduate Software Engineer",
               "email": "sharysingh1144@gmail.com",
               "address": {
