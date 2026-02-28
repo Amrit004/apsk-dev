@@ -30,17 +30,17 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="max-w-6xl mx-auto px-6 py-8">
+      <div className="max-w-6xl mx-auto px-6 pt-20">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <motion.div
             className="relative"
           >
-            <h1 className="text-3xl font-bold mb-1 text-white brand-text">
+            <h1 className="text-3xl font-bold gradient-text">
               Amritpal Singh Kaur
             </h1>
-            <p className="text-cyan-400 font-medium mb-2">Based in London, United Kingdom</p>
+            <p className="text-cyan-400 font-medium mb-4">Based in London, United Kingdom</p>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-2 text-white">
+            <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-4">
               Full-Stack Software Developer
             </h2>
             <p className="text-xl text-purple-400 mb-4">MSc Computer Science – Queen Mary University of London</p>

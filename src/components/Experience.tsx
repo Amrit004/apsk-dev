@@ -53,7 +53,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-3xl font-bold mb-3 gradient-text">
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">

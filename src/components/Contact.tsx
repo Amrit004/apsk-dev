@@ -26,7 +26,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-3xl font-bold mb-3 gradient-text">
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">

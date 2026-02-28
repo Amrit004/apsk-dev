@@ -36,7 +36,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4 gradient-text">
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">

@@ -13,7 +13,7 @@ export default function Seeking() {
           viewport={{ once: true }}
           className="glass-card rounded-xl p-6 text-center"
         >
-          <h3 className="text-xl font-bold mb-4 text-white">Currently Seeking</h3>
+          <h3 className="text-xl font-bold mb-4 gradient-text">Currently Seeking</h3>
           <p className="text-slate-300 mb-4">
             I am currently seeking graduate or junior software engineering roles where I can contribute to building scalable systems, learn from experienced engineers, and grow within a high-performance development team.
           </p>

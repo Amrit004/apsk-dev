@@ -50,7 +50,7 @@ export default function Education() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-3xl font-bold mb-3 gradient-text">
             <span className="gradient-text">Education</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
