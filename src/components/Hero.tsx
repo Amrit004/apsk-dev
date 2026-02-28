@@ -30,7 +30,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="max-w-6xl mx-auto px-6 pt-4">
+      <div className="max-w-6xl mx-auto px-6 pt-2">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <motion.div
             className="relative"
@@ -132,7 +132,7 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="flex justify-center mt-8 gap-6 text-center"
+          className="flex justify-center mt-2 gap-6 text-center"
         >
           <div>
             <div className="text-2xl font-bold text-cyan-400">3</div>

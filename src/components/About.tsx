@@ -28,13 +28,13 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-12 relative">
+    <section id="about" className="py-2 relative">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-2"
         >
           <h2 className="text-3xl font-bold mb-4 gradient-text">
             About <span className="gradient-text">Me</span>
