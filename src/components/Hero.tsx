@@ -86,7 +86,7 @@ export default function Hero() {
             className="relative"
           >
             <div className="glass-card rounded-2xl p-6 text-center">
-              <div className="text-6xl lg:text-7xl font-bold gradient-text mb-2">18</div>
+              <div className="text-6xl lg:text-7xl font-bold gradient-text mb-2">23</div>
               <div className="text-slate-400 text-lg mb-6">GitHub Repositories</div>
               
               <div className="grid grid-cols-2 gap-4 text-left">

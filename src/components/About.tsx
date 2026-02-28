@@ -21,7 +21,7 @@ const highlights = [
   },
   {
     icon: Award,
-    title: "18 Public Repos",
+    title: "23 Public Repos",
     description: "Cloud security, cryptography, AI PWAs, full-stack — all on GitHub",
   },
 ];
@@ -110,7 +110,7 @@ export default function About() {
             I am a multilingual Graduate Software Engineer finishing my MSc in Advanced Computer Science at Queen Mary University of London (2026), building on a BSc 2:1 from Staffordshire University. What sets me apart is my enterprise experience — I have worked inside some of the world most demanding IT environments: <span className="text-cyan-400">Bank of America</span> (regulated FinTech), <span className="text-purple-400">Amadeus</span> (global travel tech), and <span className="text-green-400">ENI</span> (energy infrastructure).
           </p>
           <p className="text-slate-400 leading-relaxed">
-            I have authored 18 public GitHub repositories spanning cloud security dashboards, cryptographic toolkits, AI-powered PWAs, and full-stack applications. I am actively seeking graduate roles in software engineering, cloud/DevOps, data, or cybersecurity where I can contribute immediately while continuing to grow.
+            I have authored 23 public GitHub repositories spanning cloud security dashboards, cryptographic toolkits, AI-powered PWAs, and full-stack applications. I am actively seeking graduate roles in software engineering, cloud/DevOps, data, or cybersecurity where I can contribute immediately while continuing to grow.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             {["Software Engineering", "Cloud / DevOps", "Cybersecurity", "Data / AI"].map((tag) => (
