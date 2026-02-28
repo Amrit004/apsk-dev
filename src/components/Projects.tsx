@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Shield, Lock, Wifi, Plane, Kanban, BarChart, Code, Database, Bot, Server } from "lucide-react";
+import { ExternalLink, Github, Shield, Lock, Wifi, Plane, Kanban, BarChart, Code, Database, Bot, Server, Lightbulb, Rocket } from "lucide-react";
 
 const projects = [
   {
@@ -11,6 +11,8 @@ const projects = [
     description: "Real-time AWS SOC simulation dashboard with live threat feed, animated world threat map, IAM activity charts, and compliance scoring.",
     tech: ["Cloud Security", "AWS Architecture", "IAM & Access Control", "SOC Dashboard", "Vanilla JS"],
     github: "https://github.com/Amrit004/SecureVault",
+    challenge: "Simulating real-time threat data and creating an intuitive dashboard for security metrics.",
+    solution: "Built a custom data simulation engine with animated world map using vanilla JavaScript and CSS animations for smooth 60fps rendering.",
     featured: true,
   },
   {
@@ -20,6 +22,8 @@ const projects = [
     description: "Browser-based cryptographic toolkit with AES-256 encryption, SHA/MD5 hashing, JWT decoder, password strength analyser using Web Crypto API.",
     tech: ["Web Crypto API", "Vanilla JS", "Security"],
     github: "https://github.com/Amrit004/CipherOS",
+    challenge: "Implementing military-grade encryption entirely in the browser without backend dependencies.",
+    solution: "Leveraged the Web Crypto API for secure, performant cryptographic operations entirely client-side.",
   },
   {
     icon: Wifi,
@@ -28,6 +32,8 @@ const projects = [
     description: "Nmap/Nessus-style scanner simulation with 4 scan modes and CVE database including Log4Shell and EternalBlue.",
     tech: ["Network Security", "CVE Analysis", "Port Scanning"],
     github: "https://github.com/Amrit004/Netscan-pro",
+    challenge: "Creating realistic scanner simulations with accurate CVE data.",
+    solution: "Built a comprehensive CVE database and implemented multiple scan algorithms for realistic network analysis.",
   },
   {
     icon: Plane,
@@ -36,6 +42,8 @@ const projects = [
     description: "Installable PWA with client-side AI matching engine, NLP query processing, budget planning and full offline support.",
     tech: ["PWA", "Service Workers", "AI Matching"],
     github: "https://github.com/Amrit004/TravelAgencyPwa",
+    challenge: "Building an AI-powered travel planner that works offline.",
+    solution: "Implemented Service Workers for full offline capability with IndexedDB for local data persistence.",
   },
   {
     icon: Kanban,
@@ -44,6 +52,8 @@ const projects = [
     description: "Kanban board with JWT authentication, drag-and-drop columns, multi-project support and activity logging.",
     tech: ["JWT Auth", "Full-Stack", "Drag & Drop"],
     github: "https://github.com/Amrit004/CodeFlow",
+    challenge: "Creating a smooth drag-and-drop experience with real-time updates.",
+    solution: "Implemented custom drag-and-drop with HTML5 DnD API and WebSocket-ready architecture.",
   },
   {
     icon: BarChart,
@@ -52,6 +62,8 @@ const projects = [
     description: "Real-time GitHub REST API consumer with Canvas-based charts, contribution heatmap, and developer score algorithm.",
     tech: ["GitHub API", "Data Viz", "Canvas"],
     github: "https://github.com/Amrit004/DevMetrics",
+    challenge: "Visualizing GitHub data with custom charts and scoring algorithms.",
+    solution: "Built custom Canvas-based visualizations with a unique developer scoring algorithm.",
   },
   {
     icon: Bot,
@@ -60,6 +72,8 @@ const projects = [
     description: "RESTful API for neural network predictions with real-time processing and Docker containerization.",
     tech: ["Python", "TensorFlow", "Docker", "REST API"],
     github: "https://github.com/Amrit004/NeuralStream-API",
+    challenge: "Building a production-ready ML API with Docker.",
+    solution: "Created a containerized Flask/FastAPI service with TensorFlow integration for real-time predictions.",
   },
   {
     icon: Server,
@@ -68,6 +82,8 @@ const projects = [
     description: "Full-stack travel booking application with user authentication, booking management, and payment integration.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/Amrit004/AiTravel",
+    challenge: "Building a complete booking platform with payments.",
+    solution: "Implemented JWT auth, MongoDB schemas for bookings, and Stripe integration for payments.",
   },
   {
     icon: Code,
@@ -76,6 +92,8 @@ const projects = [
     description: "Cross-platform mobile application for task management with offline sync and push notifications.",
     tech: ["React Native", "Expo", "Firebase"],
     github: "https://github.com/Amrit004/MobileApp",
+    challenge: "Building a cross-platform app with offline support.",
+    solution: "Used Expo with Firebase for backend and implemented offline-first architecture with sync.",
   },
   {
     icon: Database,
@@ -84,6 +102,8 @@ const projects = [
     description: "NPM package for sorting algorithms with visualization and performance benchmarking.",
     tech: ["JavaScript", "Algorithms", "NPM"],
     github: "https://github.com/Amrit004/Ordering.Js",
+    challenge: "Creating a performant sorting library with visualization.",
+    solution: "Implemented optimized sorting algorithms with O(n log n) complexity and built a visual demo.",
   },
 ];
 
@@ -101,7 +121,7 @@ export default function Projects() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Selected personal projects spanning cryptography, cloud security, network tooling, AI/ML, and full-stack development.
+            Selected projects showcasing skills in security, AI/ML, full-stack development, and problem-solving.
           </p>
         </motion.div>
 
@@ -141,6 +161,23 @@ export default function Projects() {
                     {t}
                   </span>
                 ))}
+              </div>
+
+              <div className="space-y-3 mb-4">
+                <div className="flex items-start gap-2">
+                  <Lightbulb className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Challenge</p>
+                    <p className="text-xs text-slate-400">{project.challenge}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Rocket className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Solution</p>
+                    <p className="text-xs text-slate-400">{project.solution}</p>
+                  </div>
+                </div>
               </div>
 
               <a
