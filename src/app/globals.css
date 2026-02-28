@@ -6,6 +6,8 @@
   --accent: #00d4ff;
   --secondary: #7c3aed;
   --pink: #ff006e;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-heading: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 html {
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -110,4 +112,10 @@ body {
 
 .skip-link:focus {
   top: 0;
+}
+
+/* Ensure headings use a consistent font family across the app */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
