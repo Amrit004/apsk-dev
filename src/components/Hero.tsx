@@ -108,7 +108,7 @@ export default function Hero() {
                   Get In Touch <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1ZHsoCGm7w2DQfw8XGu648o_2fotxtFd7/view"
+                  href="https://drive.google.com/uc?export=download&id=1ZHsoCGm7w2DQfw8XGu648o_2fotxtFd7"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setDownloads(d => d + 1)}
