@@ -35,11 +35,14 @@ export default function Hero() {
           <motion.div
             className="relative"
           >
+            <h1 className="text-3xl font-bold mb-2 text-white">
+              Amritpal Singh Kaur
+            </h1>
             <p className="text-cyan-400 font-medium mb-2">Based in London, United Kingdom</p>
 
-            <h1 className="text-4xl lg:text-5xl font-bold mb-2 text-white">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-2 text-white">
               Full-Stack Software Developer
-            </h1>
+            </h2>
             <p className="text-xl text-purple-400 mb-4">MSc Computer Science – Queen Mary University of London</p>
             
             <p className="text-slate-400 mb-4 max-w-lg">
