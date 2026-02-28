@@ -2,9 +2,35 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Shield, Lock, Wifi, Plane, Kanban, BarChart, Code, Database, Bot, Server, Lightbulb, Rocket, X, Eye } from "lucide-react";
+import { ExternalLink, Github, Shield, Lock, Wifi, Plane, Kanban, BarChart, Code, Database, Bot, Server, Lightbulb, Rocket, X, Eye, Activity, AlertTriangle } from "lucide-react";
 
 const projects = [
+  {
+    icon: Activity,
+    title: "Enterprise Analytics Dashboard",
+    category: "Data Analytics",
+    description: "Enterprise-grade analytics platform with real-time KPIs, AI-powered predictions, live user tracking, traffic source analysis, and interactive data visualizations. Features revenue forecasting and regional analytics.",
+    tech: ["Next.js", "Recharts", "AI Predictions", "Real-time Data", "Tailwind CSS"],
+    github: "https://github.com/Amrit004/enterprise-analytics-dashboard",
+    demo: "https://enterprise-analytics-dashboard.vercel.app",
+    challenge: "Building a scalable analytics platform that handles real-time data with AI-powered predictions and interactive visualizations.",
+    solution: "Implemented WebSocket-ready architecture with custom chart components, AI prediction algorithms using linear regression, and optimized rendering for large datasets.",
+    featured: true,
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    icon: AlertTriangle,
+    title: "SOC Command Center",
+    category: "Cybersecurity",
+    description: "Enterprise Security Operations Center dashboard with real-time threat detection, live attack map, incident response, network monitoring, compliance tracking, and AI-powered threat analysis.",
+    tech: ["Next.js", "Security Analytics", "Threat Detection", "Compliance", "Real-time"],
+    github: "https://github.com/Amrit004/soc-command-center",
+    demo: "https://soc-command-center.vercel.app",
+    challenge: "Creating an enterprise SOC dashboard with realistic threat visualization and real-time monitoring capabilities.",
+    solution: "Built custom animated threat map, integrated compliance frameworks (GDPR, SOC2, ISO27001, HIPAA), and implemented real-time alert system with severity scoring.",
+    featured: true,
+    color: "from-red-500 to-orange-500",
+  },
   {
     icon: Shield,
     title: "SecureVault",
@@ -15,7 +41,6 @@ const projects = [
     demo: "https://securevault.vercel.app",
     challenge: "Simulating real-time threat data and creating an intuitive dashboard for security metrics.",
     solution: "Built a custom data simulation engine with animated world map using vanilla JavaScript and CSS animations for smooth 60fps rendering.",
-    featured: true,
     color: "from-cyan-500 to-blue-500",
   },
   {
@@ -43,6 +68,18 @@ const projects = [
     color: "from-green-500 to-emerald-500",
   },
   {
+    icon: BarChart,
+    title: "DevMetrics",
+    category: "GitHub Analytics",
+    description: "Real-time GitHub REST API consumer with Canvas-based charts, contribution heatmap, and developer score algorithm.",
+    tech: ["GitHub API", "Data Viz", "Canvas"],
+    github: "https://github.com/Amrit004/DevMetrics",
+    demo: "https://devmetrics.vercel.app",
+    challenge: "Visualizing GitHub data with custom charts and scoring algorithms.",
+    solution: "Built custom Canvas-based visualizations with a unique developer scoring algorithm.",
+    color: "from-violet-500 to-purple-500",
+  },
+  {
     icon: Plane,
     title: "Wandr",
     category: "AI Travel Planner PWA",
@@ -65,17 +102,6 @@ const projects = [
     challenge: "Creating a smooth drag-and-drop experience with real-time updates.",
     solution: "Implemented custom drag-and-drop with HTML5 DnD API and WebSocket-ready architecture.",
     color: "from-blue-500 to-indigo-500",
-  },
-  {
-    icon: BarChart,
-    title: "DevMetrics",
-    category: "GitHub Analytics",
-    description: "Real-time GitHub REST API consumer with Canvas-based charts, contribution heatmap, and developer score algorithm.",
-    tech: ["GitHub API", "Data Viz", "Canvas"],
-    github: "https://github.com/Amrit004/DevMetrics",
-    challenge: "Visualizing GitHub data with custom charts and scoring algorithms.",
-    solution: "Built custom Canvas-based visualizations with a unique developer scoring algorithm.",
-    color: "from-violet-500 to-purple-500",
   },
   {
     icon: Bot,
@@ -129,7 +155,7 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="py-24">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +166,7 @@ export default function Projects() {
               Featured <span className="gradient-text">Projects</span>
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Click on any project to see a preview. Selected projects have live demos available.
+              Click on any project to see a preview. New: Enterprise Analytics & SOC Command Center - enterprise-grade demos with live data!
             </p>
           </motion.div>
 
