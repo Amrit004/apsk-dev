@@ -35,7 +35,7 @@ export default function Hero() {
     <>
       <button
         onClick={toggle}
-        className="fixed top-20 right-6 z-50 p-3 rounded-full glass-card hover:border-cyan-500/50 transition-all"
+        className="fixed top-20 right-6 z-50 p-3 rounded-full glass-card hover:border-teal-500/50 dark:hover:border-cyan-500/50 transition-all"
         aria-label="Toggle theme"
       >
         {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-slate-700" />}
@@ -43,14 +43,14 @@ export default function Hero() {
 
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500/20 dark:bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 dark:bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/10 dark:bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
           
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+              className="absolute w-1 h-1 bg-teal-600 dark:bg-cyan-400 rounded-full"
               initial={{ 
                 x: Math.random() * 100 + '%', 
                 y: Math.random() * 100 + '%',
@@ -76,8 +76,8 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm mb-6">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 dark:bg-cyan-500/10 border border-teal-500/20 dark:border-cyan-500/20 text-teal-700 dark:text-cyan-400 text-sm mb-6">
+                <span className="w-2 h-2 rounded-full bg-teal-600 dark:bg-cyan-400 animate-pulse" />
                 Open to Work — Summer 2026
               </div>
 
@@ -92,25 +92,25 @@ export default function Hero() {
                 </span>
               </div>
 
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-lg">
+              <p className="text-lg text-slate-700 dark:text-slate-400 mb-8 max-w-lg">
                 Multilingual developer (EN · ES · CA · PA · HI) with enterprise experience at 
-                <span className="text-cyan-600 dark:text-cyan-400"> Bank of America</span>, 
-                <span className="text-purple-600 dark:text-purple-400"> Amadeus</span> & 
-                <span className="text-green-600 dark:text-green-400"> ENI</span>. 
+                <span className="text-teal-700 dark:text-cyan-400"> Bank of America</span>, 
+                <span className="text-purple-700 dark:text-purple-400"> Amadeus</span> & 
+                <span className="text-green-700 dark:text-green-400"> ENI</span>. 
                 MSc Advanced CS at QMUL (2026).
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-teal-600 hover:bg-teal-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-teal-500/25 dark:hover:shadow-cyan-500/25"
                 >
                   Get In Touch <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
                   href="/cv.pdf"
                   download="Amritpal-Singh-Kaur-CV.pdf"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-semibold transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:border-teal-500 dark:hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-teal-700 dark:hover:text-cyan-400 font-semibold transition-all"
                 >
                   <Download className="w-4 h-4" />
                   Download CV
@@ -154,31 +154,31 @@ export default function Hero() {
                 
                 <div className="grid grid-cols-2 gap-4 text-left">
                   <div className="bg-slate-200 dark:bg-slate-800/50 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">JavaScript</div>
+                    <div className="text-2xl font-bold text-teal-700 dark:text-cyan-400">JavaScript</div>
                     <div className="text-slate-500 dark:text-slate-400 text-sm">40%</div>
                     <div className="h-1 bg-slate-300 dark:bg-slate-700 rounded-full mt-2 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" style={{ width: '40%' }} />
+                      <div className="h-full bg-gradient-to-r from-teal-600 to-teal-500 dark:from-cyan-500 dark:to-cyan-400 rounded-full" style={{ width: '40%' }} />
                     </div>
                   </div>
                   <div className="bg-slate-200 dark:bg-slate-800/50 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">TypeScript</div>
+                    <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">TypeScript</div>
                     <div className="text-slate-500 dark:text-slate-400 text-sm">25%</div>
                     <div className="h-1 bg-slate-300 dark:bg-slate-700 rounded-full mt-2 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full" style={{ width: '25%' }} />
+                      <div className="h-full bg-gradient-to-r from-purple-600 to-purple-500 dark:from-purple-500 dark:to-purple-400 rounded-full" style={{ width: '25%' }} />
                     </div>
                   </div>
                   <div className="bg-slate-200 dark:bg-slate-800/50 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">Python</div>
+                    <div className="text-2xl font-bold text-green-700 dark:text-green-400">Python</div>
                     <div className="text-slate-500 dark:text-slate-400 text-sm">20%</div>
                     <div className="h-1 bg-slate-300 dark:bg-slate-700 rounded-full mt-2 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full" style={{ width: '20%' }} />
+                      <div className="h-full bg-gradient-to-r from-green-600 to-green-500 dark:from-green-500 dark:to-green-400 rounded-full" style={{ width: '20%' }} />
                     </div>
                   </div>
                   <div className="bg-slate-200 dark:bg-slate-800/50 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">Java</div>
+                    <div className="text-2xl font-bold text-yellow-700 dark:text-yellow-400">Java</div>
                     <div className="text-slate-500 dark:text-slate-400 text-sm">15%</div>
                     <div className="h-1 bg-slate-300 dark:bg-slate-700 rounded-full mt-2 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full" style={{ width: '15%' }} />
+                      <div className="h-full bg-gradient-to-r from-yellow-600 to-yellow-500 dark:from-yellow-500 dark:to-yellow-400 rounded-full" style={{ width: '15%' }} />
                     </div>
                   </div>
                 </div>
@@ -193,15 +193,15 @@ export default function Hero() {
             className="flex justify-center mt-16 gap-8 text-center"
           >
             <div>
-              <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">3</div>
+              <div className="text-3xl font-bold text-teal-700 dark:text-cyan-400">3</div>
               <div className="text-slate-500 dark:text-slate-500 text-sm">Enterprise Companies</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">2</div>
+              <div className="text-3xl font-bold text-purple-700 dark:text-purple-400">2</div>
               <div className="text-slate-500 dark:text-slate-500 text-sm">CS Degrees</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400">5</div>
+              <div className="text-3xl font-bold text-green-700 dark:text-green-400">5</div>
               <div className="text-slate-500 dark:text-slate-500 text-sm">Languages Spoken</div>
             </div>
           </motion.div>
