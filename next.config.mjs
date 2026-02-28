@@ -6,7 +6,7 @@ const nextConfig = {
         source: "/:path*",
         has: [{ type: "host", value: "apsk-portofolio.vercel.app" }],
         permanent: true,
-        destination: "https://apsk-portfolio.vercel.app/:path*",
+        destination: "https://apsk-dev.vercel.app/:path*",
       },
     ];
   },
