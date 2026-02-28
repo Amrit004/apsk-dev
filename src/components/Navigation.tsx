@@ -37,7 +37,7 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 text-xl font-bold brand" aria-label="APSK Portfolio Home">
+          <a href="#" className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white brand" aria-label="APSK Portfolio Home">
             Amritpal Singh Kaur
           </a>
 
