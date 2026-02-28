@@ -7,7 +7,7 @@ const experiences = [
   {
     company: "Bank of America",
     role: "Deployment / Breakfix Engineer",
-    period: "Enterprise Systems",
+    period: "April 2022 - Present",
     location: "London, UK",
     type: "FinTech · Regulated",
     description: [
@@ -75,29 +75,29 @@ export default function Experience() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <Building2 className="w-5 h-5 text-cyan-400" />
-                    <h3 className="text-lg font-bold text-white">{exp.company}</h3>
+                    <h3 className="text-lg font-bold text-cyan-100">{exp.company}</h3>
                   </div>
-                  <p className="text-cyan-400 text-sm">{exp.role}</p>
+                  <p className="text-cyan-300 text-sm">{exp.role}</p>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center gap-1 text-slate-500 text-xs">
+                  <div className="flex items-center gap-1 text-slate-400 text-xs">
                     <Calendar className="w-3 h-3" />
                     {exp.period}
                   </div>
-                  <div className="flex items-center gap-1 text-slate-500 text-xs mt-0.5">
+                  <div className="flex items-center gap-1 text-slate-400 text-xs mt-0.5">
                     <MapPin className="w-3 h-3" />
                     {exp.location}
                   </div>
                 </div>
               </div>
               
-              <span className="inline-block px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 text-xs mb-3">
+              <span className="inline-block px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 text-xs mb-3">
                 {exp.type}
               </span>
 
               <ul className="space-y-2">
                 {exp.description.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-slate-400 text-sm">
+                  <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0" />
                     {item}
                   </li>
