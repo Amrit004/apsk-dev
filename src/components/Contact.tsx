@@ -118,10 +118,11 @@ export default function Contact() {
             className="glass-card rounded-2xl p-8"
           >
             <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} aria-label="Contact form" className="space-y-4">
               <div>
-                <label className="block text-sm text-slate-400 mb-2">Name</label>
+                <label htmlFor="contact-name" className="block text-sm text-slate-400 mb-2">Name</label>
                 <input
+                  id="contact-name"
                   type="text"
                   name="name"
                   required
@@ -130,8 +131,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">Email</label>
+                <label htmlFor="contact-email" className="block text-sm text-slate-400 mb-2">Email</label>
                 <input
+                  id="contact-email"
                   type="email"
                   name="email"
                   required
@@ -140,8 +142,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">Message</label>
+                <label htmlFor="contact-message" className="block text-sm text-slate-400 mb-2">Message</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   required
                   rows={5}

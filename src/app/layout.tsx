@@ -8,9 +8,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Amritpal Singh Kaur" }],
   openGraph: {
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
-    description: "Multilingual Graduate Software Engineer with enterprise experience. MSc Advanced CS at QMUL.",
+    description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc candidate in Advanced CS.",
     type: "website",
     locale: "en_GB",
+    url: "https://apsk-portfolio.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
@@ -27,9 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="canonical" href="https://apsk-portfolio.vercel.app" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="bg-slate-950 text-slate-100 antialiased">
+        <a href="#main-content" className="skip-link">Skip to content</a>
         {children}
       </body>
     </html>

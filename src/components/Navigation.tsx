@@ -29,22 +29,25 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
+      role="navigation"
+      aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-slate-950/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 text-xl font-bold">
+          <a href="#" className="flex items-center gap-2 text-xl font-bold" aria-label="APSK Portfolio Home">
             <Code2 className="w-8 h-8 text-cyan-400" />
             <span className="gradient-text">APSK</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8" role="menubar">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
+                role="menuitem"
                 className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium"
               >
                 {item.name}
@@ -55,6 +58,8 @@ export default function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-slate-300 hover:text-cyan-400"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
