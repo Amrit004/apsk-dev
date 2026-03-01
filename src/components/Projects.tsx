@@ -171,16 +171,14 @@ export default function Projects() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {projects.slice(0, 6).map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className={`glass-card rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all hover:transform hover:-translate-y-1 cursor-pointer ${
-                  project.featured ? "md:col-span-2 lg:col-span-2" : ""
-                }`}
+                className="glass-card rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all hover:transform hover:-translate-y-1 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className={`h-32 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
@@ -192,16 +190,9 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-start justify-between mb-2">
-                    {project.featured && (
-                      <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-medium">
-                        Featured
-                      </span>
-                    )}
-                  </div>
                   <h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">{project.title}</h3>
                   <span className="text-sm text-slate-500 dark:text-slate-500">{project.category}</span>
-                  <p className="text-slate-600 dark:text-slate-400 mt-3 mb-4 text-sm">{project.description}</p>
+                  <p className="text-slate-600 dark:text-slate-400 mt-3 mb-4 text-sm">{project.description.substring(0, 100)}...</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((t) => (
                       <span key={t} className="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 text-xs">
