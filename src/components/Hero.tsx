@@ -2,81 +2,73 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
-
-const roles = [
-  "Full-Stack Developer",
-  "Software Engineer",
-  "Cloud Developer",
-  "AI Enthusiast"
-];
+import { ArrowRight, Github, Linkedin, Mail, Download, Sparkles } from "lucide-react";
 
 export default function Hero() {
-  const [currentRole, setCurrentRole] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCharIndex((prev) => {
-        if (prev >= roles[currentRole].length) {
-          setCurrentRole((r) => (r + 1) % roles.length);
-          return 0;
-        }
-        return prev + 1;
-      });
-    }, 100);
-    return () => clearInterval(interval);
-  }, [currentRole]);
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative py-8 md:py-0">
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
       <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16 md:pt-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             className="relative text-center lg:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2 md:mb-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs mb-4"
+            >
+              <Sparkles className="w-3 h-3" />
+              Open to Work
+            </motion.div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-2 md:mb-3">
               Amritpal Singh Kaur
             </h1>
-            <p className="text-cyan-400 font-medium mb-3 md:mb-4">Based in London, United Kingdom</p>
 
-            <h2 className="text-xl md:text-2xl lg:text-4xl font-bold gradient-text mb-3 md:mb-4">
-              Full-Stack Software Developer
-            </h2>
-            <p className="text-base md:text-lg text-purple-400 mb-3 md:mb-4 hidden sm:block">MSc Computer Science – Queen Mary University of London</p>
-            
-            <p className="text-slate-400 text-sm md:text-base mb-3 md:mb-4 max-w-lg mx-auto lg:mx-0 hidden md:block">
-              I design and build scalable web applications, REST APIs, and AI-powered systems using modern JavaScript technologies.
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">
+              Graduate Software Engineer
             </p>
-            
+            <p className="text-cyan-400 font-medium mb-4">Cloud & Security-Focused Developer</p>
+
+            <p className="text-purple-400 text-sm md:text-base mb-3 md:mb-4 hidden sm:block">MSc Advanced Computer Science – Queen Mary University of London</p>
+
             <p className="text-slate-400 text-sm md:text-base mb-4 md:mb-6 max-w-lg mx-auto lg:mx-0 hidden md:block">
-              I am a Computer Science postgraduate specialising in full-stack development and AI-integrated applications.
+              Building secure, scalable solutions with modern JavaScript technologies. Experience in regulated enterprise environments.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4 md:mt-0">
+            <motion.div
+              className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4 md:mt-0"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 View Projects <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="/cv.pdf"
                 download="Amritpal-Singh-Kaur-CV.pdf"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
               >
                 <Download className="w-4 h-4" />
                 Download CV
               </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
-              >
-                Contact Me
-              </a>
-            </div>
+            </motion.div>
 
-            <div className="flex justify-center lg:justify-start gap-4 mt-4 md:mt-5">
+            <motion.div
+              className="flex justify-center lg:justify-start gap-4 mt-5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
               <a
                 href="https://github.com/Amrit004"
                 target="_blank"
@@ -99,11 +91,14 @@ export default function Hero() {
               >
                 <Mail className="w-4 h-4" />Email
               </a>
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
             className="relative hidden md:block mt-6 md:mt-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="glass-card rounded-xl p-5 text-center gradient-border">
               <div className="text-5xl font-bold gradient-text mb-1">23</div>
@@ -132,18 +127,21 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="flex justify-center mt-4 md:mt-8 gap-4 md:gap-12 text-center"
+          className="flex justify-center mt-6 md:mt-10 gap-6 md:gap-16 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
         >
           <div>
-            <div className="text-xl md:text-2xl font-bold text-cyan-400">3</div>
+            <div className="text-2xl md:text-3xl font-bold text-cyan-400">3</div>
             <div className="text-slate-500 text-xs">Enterprise</div>
           </div>
           <div>
-            <div className="text-xl md:text-2xl font-bold text-purple-400">2</div>
+            <div className="text-2xl md:text-3xl font-bold text-purple-400">2</div>
             <div className="text-slate-500 text-xs">CS Degrees</div>
           </div>
           <div>
-            <div className="text-xl md:text-2xl font-bold text-green-400">5</div>
+            <div className="text-2xl md:text-3xl font-bold text-green-400">5</div>
             <div className="text-slate-500 text-xs">Languages</div>
           </div>
         </motion.div>

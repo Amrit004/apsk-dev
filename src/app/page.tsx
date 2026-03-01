@@ -18,13 +18,19 @@ export default function Home() {
       <ScrollProgress />
       <Navigation />
       <Hero />
-      <ScrollIndicator />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <About />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Education />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Experience />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Skills />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Seeking />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Projects />
+      <div className="section-divider max-w-4xl mx-auto"></div>
       <Contact />
     </main>
   );
