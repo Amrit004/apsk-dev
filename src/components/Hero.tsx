@@ -26,7 +26,7 @@ export default function Hero() {
               Open to Work
             </motion.div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-2 md:mb-3">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-2 md:mb-3 break-words">
               Amritpal Singh Kaur
             </h1>
 
@@ -48,8 +48,14 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
             >
               <a
-                href="#projects"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Hire Me <Sparkles className="w-4 h-4" />
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
               >
                 View Projects <ArrowRight className="w-4 h-4" />
               </a>
@@ -59,7 +65,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
               >
                 <Download className="w-4 h-4" />
-                Download CV
+                CV
               </a>
             </motion.div>
 
