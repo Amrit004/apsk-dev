@@ -9,12 +9,12 @@
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --font-heading: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   
-  /* Dark theme (default) */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --bg-card: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+  /* Dark theme - softer on eyes */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --bg-card: linear-gradient(135deg, rgba(22, 27, 34, 0.85) 0%, rgba(13, 17, 23, 0.85) 100%);
   --border-color: rgba(0, 212, 255, 0.1);
 }
 
@@ -23,13 +23,40 @@
   --secondary: #6366f1;
   --pink: #ec4899;
   
-  /* Light theme */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #e2e8f0;
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
-  --bg-card: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
-  --border-color: rgba(14, 165, 233, 0.2);
+  /* Soft warm light theme - easy on eyes */
+  --bg-primary: #faf9f6;
+  --bg-secondary: #f0efe9;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --bg-card: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(250, 249, 246, 0.85) 100%);
+  --border-color: rgba(14, 165, 233, 0.15);
+}
+
+/* Light mode text colors - softer for eyes */
+:root.light .text-slate-300,
+:root.light .text-slate-400,
+:root.light .text-slate-500 {
+  color: var(--text-secondary) !important;
+}
+
+:root.light .text-slate-600,
+:root.light .text-slate-700,
+:root.light .text-slate-800,
+:root.light .text-slate-900 {
+  color: var(--text-primary) !important;
+}
+
+:root.light .bg-slate-200,
+:root.light .bg-slate-800 {
+  background-color: var(--bg-secondary) !important;
+}
+
+:root.light .bg-slate-800\/50 {
+  background-color: rgba(240, 239, 233, 0.5) !important;
+}
+
+:root.light .border-slate-700 {
+  border-color: var(--border-color) !important;
 }
 
 html {
@@ -53,6 +80,11 @@ body {
 
 :root.light body {
   background-image: none;
+}
+
+/* Ensure text uses CSS variables */
+body, p, span, div, h1, h2, h3, h4, h5, h6, li, td, th {
+  color: var(--text-primary);
 }
 
 .glass-card {
