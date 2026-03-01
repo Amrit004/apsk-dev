@@ -70,7 +70,7 @@ export default function About() {
           className="glass-card rounded-xl p-5"
         >
           <p className="text-slate-300 leading-relaxed mb-4">
-            I am an MSc Computer Science student at Queen Mary University of London with a strong foundation in software engineering, full-stack web development, and applied AI. I enjoy building scalable systems that solve real-world problems and continuously improving performance, security, and user experience.
+            I am an MSc Advanced Computer Science student at Queen Mary University of London with a strong foundation in software engineering, full-stack web development, and applied AI. I enjoy building scalable systems that solve real-world problems and continuously improving performance, security, and user experience.
           </p>
           <p className="text-slate-300 leading-relaxed">
             My experience includes developing RESTful APIs, integrating AI models, deploying cloud-hosted applications, and designing responsive user interfaces. I am particularly interested in backend development, system design, and intelligent applications.

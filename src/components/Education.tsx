@@ -5,7 +5,7 @@ import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
 
 const education = [
   {
-    degree: "MSc Computer Science",
+    degree: "MSc Advanced Computer Science",
     school: "Queen Mary University of London",
     period: "2024 – Present",
     status: "In Progress",
