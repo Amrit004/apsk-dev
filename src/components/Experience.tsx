@@ -61,9 +61,6 @@ export default function Experience() {
             <p className="text-cyan-400 font-medium">
               Employed by Manpower (Zoom IT) – April 2022 - Present
             </p>
-            <p className="text-cyan-300 text-sm mt-1">
-              Placed at: Bank of America (Currently), Amadeus & ENI (Cover Shifts)
-            </p>
           </div>
 
           <p className="text-slate-400 max-w-xl mx-auto">
