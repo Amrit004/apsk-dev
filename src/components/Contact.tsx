@@ -14,7 +14,7 @@ export default function Contact() {
     const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     
-    window.open(`mailto:apsk.work@outlook.com?subject=${subject}&body=${body}`, "_blank");
+    window.open(`mailto:ap.singhkaur@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
 
   return (
@@ -44,7 +44,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold mb-6 text-slate-900 dark:text-white">Contact Information</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:apsk.work@outlook.com"
+                  href="mailto:ap.singhkaur@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-200/50 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">
@@ -52,7 +52,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-600 dark:text-slate-400">Email</p>
-                    <p className="font-medium text-slate-900 dark:text-white">apsk.work@outlook.com</p>
+                    <p className="font-medium text-slate-900 dark:text-white">ap.singhkaur@gmail.com</p>
                   </div>
                 </a>
 

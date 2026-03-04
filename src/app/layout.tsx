@@ -60,7 +60,7 @@ export default function RootLayout({
               "name": "Amritpal Singh Kaur",
               "url": "https://apsk-dev.vercel.app",
               "jobTitle": "Graduate Software Engineer",
-              "email": "apsk.work@outlook.com",
+              "email": "ap.singhkaur@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "London",
