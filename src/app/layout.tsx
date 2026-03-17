@@ -20,14 +20,6 @@ export const metadata: Metadata = {
     siteName: "APSK Portfolio",
     locale: "en_GB",
     type: "website",
-    images: [
-      {
-        url: "https://apsk-dev.vercel.app/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Amritpal Singh Kaur - Graduate Software Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
