@@ -70,10 +70,10 @@ export default function About() {
           className="glass-card rounded-xl p-5"
         >
           <p className="text-slate-300 leading-relaxed mb-4">
-            I am an MSc Advanced Computer Science student at Queen Mary University of London with a strong foundation in software engineering, full-stack web development, and applied AI. I enjoy building scalable systems that solve real-world problems and continuously improving performance, security, and user experience.
+            MSc Advanced Computer Science candidate (Queen Mary University of London, 2026) with 3+ years of enterprise IT experience in regulated environments including Bank of America and Amadeus. Proficient in Python, JavaScript, TypeScript, AWS, Docker, and CI/CD pipelines
           </p>
           <p className="text-slate-300 leading-relaxed">
-            My experience includes developing RESTful APIs, integrating AI models, deploying cloud-hosted applications, and designing responsive user interfaces. I am particularly interested in backend development, system design, and intelligent applications.
+            Strong background in security-hardened deployments, AI-integrated full-stack development, and formal software verification. Seeking 2026 graduate roles in Software Engineering, Cloud/DevOps, or Cybersecurity.
           </p>
         </motion.div>
       </div>
