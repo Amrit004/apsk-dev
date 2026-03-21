@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, Globe, Briefcase, Code2 } from "lucide-react";
+import { GraduationCap, Globe, Briefcase, Code2, MapPin, Target } from "lucide-react";
 
 const highlights = [
   {
@@ -25,6 +25,12 @@ const highlights = [
   },
 ];
 
+const keyStrengths = [
+  "Full-stack development with JavaScript, TypeScript, and Python",
+  "Cloud infrastructure and deployment using AWS and Docker",
+  "Security-focused approach with experience in regulated environments",
+];
+
 export default function About() {
   return (
     <section id="about" className="py-16 bg-slate-950">
@@ -43,13 +49,35 @@ export default function About() {
           ))}
         </div>
 
-        <div className="card">
+        <div className="card mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <MapPin className="w-5 h-5 text-blue-400" />
+            <span className="text-slate-300">London, UK</span>
+          </div>
+          
           <p className="text-slate-300 leading-relaxed mb-4">
             I am an MSc Advanced Computer Science student at Queen Mary University of London, graduating in 2026. My BSc in Computer Science from Staffordshire University gave me a strong foundation in software development, and my current studies are deepening my knowledge in cloud architecture, machine learning, and security.
           </p>
-          <p className="text-slate-300 leading-relaxed">
-            Through my work at Bank of America, Amadeus, and ENI, I have experience in enterprise IT environments. I speak five languages, which helps in diverse team settings. I build projects in my spare time to apply what I learn and explore new technologies.
+          <p className="text-slate-300 leading-relaxed mb-4">
+            Through my work at Bank of America, Amadeus, and ENI, I have hands-on experience in enterprise IT environments. I speak five languages, which helps in diverse team settings. I build projects in my spare time to apply what I learn and explore new technologies.
           </p>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <Target className="w-5 h-5 text-blue-400" />
+            <span className="text-slate-300">Looking for: Software Engineering, Cloud/DevOps, Backend Development, Cybersecurity</span>
+          </div>
+
+          <div className="border-t border-slate-700 pt-4">
+            <h3 className="font-semibold text-white mb-3">Key Strengths</h3>
+            <ul className="space-y-2">
+              {keyStrengths.map((strength, index) => (
+                <li key={index} className="flex items-start gap-3 text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                  {strength}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
