@@ -111,12 +111,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-16 bg-slate-900">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-white mb-2">
           Projects
         </h2>
-        <p className="text-slate-500 mb-8 max-w-2xl">
+        <p className="text-slate-400 mb-8 max-w-2xl">
           Selected projects showcasing skills in security, AI/ML, full-stack development, and cloud computing.
         </p>
 
@@ -124,20 +124,20 @@ export default function Projects() {
           {projects.map((project) => (
             <div key={project.title} className="card hover:border-blue-500 transition-colors">
               <div className="flex items-start gap-3 mb-3">
-                <project.icon className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <project.icon className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+                  <h3 className="font-semibold text-white">{project.title}</h3>
                   <span className="text-sm text-slate-500">{project.category}</span>
                 </div>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+              <p className="text-slate-400 text-sm mb-4">
                 {project.description}
               </p>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t) => (
-                  <span key={t} className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-xs text-slate-600 dark:text-slate-300">
+                  <span key={t} className="px-2 py-1 rounded bg-slate-700 text-xs text-slate-300">
                     {t}
                   </span>
                 ))}
@@ -148,7 +148,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600"
+                  className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   Code
@@ -158,7 +158,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600"
+                    className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Demo
@@ -174,7 +174,7 @@ export default function Projects() {
             href="https://github.com/Amrit004"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
+            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
           >
             View all projects on GitHub
             <ExternalLink className="w-4 h-4" />
