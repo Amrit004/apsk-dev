@@ -1,319 +1,186 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Shield, Lock, Wifi, Plane, Kanban, BarChart, Code, Database, Bot, Server, Lightbulb, Rocket, X, Eye, Activity, AlertTriangle } from "lucide-react";
+import { ExternalLink, Github, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, Server } from "lucide-react";
 
 const projects = [
   {
-    icon: AlertTriangle,
+    icon: Shield,
     title: "SOC Command Center",
     category: "Cybersecurity",
-    description: "Enterprise Security Operations Center dashboard with real-time threat detection, live attack map, incident response, network monitoring, compliance tracking, and AI-powered threat analysis. Built after observing enterprise security challenges in regulated environments.",
-    tech: ["Next.js", "Real-time WebSocket", "Compliance (GDPR/SOC2/ISO27001)", "Threat Detection", "AI Analysis"],
+    description: "Security Operations Center dashboard with real-time threat detection, live attack map, and AI-powered threat analysis.",
+    tech: ["Next.js", "WebSocket", "AI Analysis"],
     github: "https://github.com/Amrit004/soc-command-center",
     demo: "https://soc-command-center.vercel.app",
-    challenge: "Creating an enterprise SOC dashboard with realistic threat visualization and real-time monitoring capabilities.",
-    solution: "Built custom animated threat map with WebSocket simulation, integrated compliance frameworks (GDPR, SOC2, ISO27001, HIPAA), and implemented real-time alert system with AI-powered severity scoring using pattern recognition.",
-    featured: true,
-    color: "from-red-500 to-orange-500",
-  },
-  {
-    icon: Shield,
-    title: "SecureVault",
-    category: "Cloud Security",
-    description: "Real-time AWS SOC simulation dashboard with live threat feed, animated world threat map, IAM activity charts, and compliance scoring. Inspired by challenges observed during enterprise security work.",
-    tech: ["AWS Architecture", "IAM & Access Control", "Zero-Knowledge Design", "SOC Dashboard", "Vanilla JS"],
-    github: "https://github.com/Amrit004/SecureVault",
-    demo: "https://securevault.vercel.app",
-    challenge: "Simulating real-time threat data and creating an intuitive dashboard for security metrics.",
-    solution: "Built a custom data simulation engine with animated world map using vanilla JavaScript and CSS animations for smooth 60fps rendering. Implemented mock AWS IAM policy evaluation logic.",
-    color: "from-cyan-500 to-blue-500",
   },
   {
     icon: Lock,
-    title: "CipherOS",
-    category: "Cryptography",
-    description: "Zero-knowledge browser-based cryptographic toolkit with AES-256-GCM encryption, SHA-3/MD5 hashing, JWT decoder, password strength analyser using Web Crypto API. All data never leaves the client.",
-    tech: ["Web Crypto API", "Zero-Knowledge (Client-Side)", "AES-256-GCM", "Security", "Vanilla JS"],
-    github: "https://github.com/Amrit004/CipherOS",
-    demo: "https://cipheros.vercel.app",
-    challenge: "Implementing military-grade encryption entirely in the browser without backend dependencies.",
-    solution: "Leveraged the Web Crypto API for secure, performant cryptographic operations entirely client-side. Zero-knowledge architecture ensures plaintext never leaves the user's browser.",
-    color: "from-purple-500 to-pink-500",
+    title: "SecureVault",
+    category: "Cloud Security",
+    description: "AWS SOC simulation dashboard with live threat feed, world threat map, IAM activity charts, and compliance scoring.",
+    tech: ["AWS", "IAM", "JavaScript"],
+    github: "https://github.com/Amrit004/SecureVault",
+    demo: "https://securevault.vercel.app",
   },
   {
-    icon: Activity,
-    title: "Enterprise Analytics Dashboard",
+    icon: Code,
+    title: "CipherOS",
+    category: "Cryptography",
+    description: "Browser-based cryptographic toolkit with AES-256 encryption, SHA hashing, and JWT decoder using Web Crypto API.",
+    tech: ["Web Crypto API", "Security"],
+    github: "https://github.com/Amrit004/CipherOS",
+    demo: "https://cipheros.vercel.app",
+  },
+  {
+    icon: BarChart,
+    title: "Enterprise Analytics",
     category: "Data Analytics",
-    description: "Enterprise-grade analytics platform with real-time KPIs, AI-powered predictions via linear regression, live user tracking, traffic source analysis, and interactive data visualizations using Recharts.",
-    tech: ["Next.js", "Recharts", "AI Predictions (Linear Regression)", "Real-time SWR Polling", "Tailwind CSS"],
+    description: "Analytics platform with real-time KPIs, AI-powered predictions, and interactive data visualizations.",
+    tech: ["Next.js", "Recharts", "AI"],
     github: "https://github.com/Amrit004/enterprise-analytics-dashboard",
     demo: "https://enterprise-analytics-dashboard.vercel.app",
-    challenge: "Building a scalable analytics platform that handles real-time data with AI-powered predictions and interactive visualizations.",
-    solution: "Implemented SWR for real-time data polling with custom chart components, AI prediction algorithms using linear regression, and optimized rendering for large datasets with memoization.",
-    featured: true,
-    color: "from-cyan-500 to-blue-500",
   },
   {
     icon: Wifi,
     title: "NetScan Pro",
     category: "Network Security",
-    description: "Nmap/Nessus-style scanner simulation with 4 scan modes (TCP, UDP, SYN, Comprehensive) and comprehensive CVE database including Log4Shell, EternalBlue, and 100+ CVEs.",
-    tech: ["Network Security", "CVE Database (100+)", "Port Scanning", "Vulnerability Assessment"],
+    description: "Nmap/Nessus-style scanner with 4 scan modes and CVE database including Log4Shell and EternalBlue.",
+    tech: ["Network Security", "CVE Database"],
     github: "https://github.com/Amrit004/Netscan-pro",
     demo: "https://netscan-pro.vercel.app",
-    challenge: "Creating realistic scanner simulations with accurate CVE data.",
-    solution: "Built a comprehensive CVE database and implemented multiple scan algorithms for realistic network analysis with severity scoring.",
-    color: "from-green-500 to-emerald-500",
   },
   {
     icon: Plane,
     title: "Wandr",
-    category: "AI Travel Planner PWA",
-    description: "Installable PWA with client-side AI matching engine, NLP query processing, budget planning and full offline support using Workbox for service worker caching strategies.",
-    tech: ["PWA", "Workbox (Cache First/Network First)", "IndexedDB", "AI Matching", "NLP Processing"],
+    category: "PWA",
+    description: "AI travel planner PWA with offline support, NLP query processing, and budget planning.",
+    tech: ["PWA", "Service Workers", "IndexedDB"],
     github: "https://github.com/Amrit004/TravelAgencyPwa",
     demo: "https://wandr.vercel.app",
-    challenge: "Building an AI-powered travel planner that works offline.",
-    solution: "Implemented Service Workers using Workbox with multiple caching strategies (Cache First for assets, Network First for API calls) and IndexedDB for local data persistence.",
-    color: "from-orange-500 to-red-500",
   },
   {
-    icon: BarChart,
-    title: "DevMetrics",
-    category: "GitHub Analytics",
-    description: "Real-time GitHub REST API consumer with Canvas-based charts, contribution heatmap, and developer score algorithm. Integrates with NPM registry for package statistics.",
-    tech: ["GitHub API", "NPM Registry API", "Canvas Rendering", "Data Viz"],
-    github: "https://github.com/Amrit004/DevMetrics",
-    demo: "https://devmetrics.vercel.app",
-    challenge: "Visualizing GitHub data with custom charts and scoring algorithms.",
-    solution: "Built custom Canvas-based visualizations with a unique developer scoring algorithm combining repo count, stars, forks, and activity.",
-    color: "from-violet-500 to-purple-500",
-  },
-  {
-    icon: Kanban,
+    icon: Database,
     title: "CodeFlow",
     category: "Project Management",
-    description: "Kanban board with stateless JWT authentication using HttpOnly cookies, drag-and-drop columns, multi-project support and activity logging.",
-    tech: ["JWT Auth (HttpOnly Cookies)", "Full-Stack", "Drag & Drop (dnd-kit)", "REST API"],
+    description: "Kanban board with JWT authentication, drag-and-drop columns, and activity logging.",
+    tech: ["JWT", "REST API"],
     github: "https://github.com/Amrit004/CodeFlow",
     demo: "https://codeflow.vercel.app",
-    challenge: "Creating a smooth drag-and-drop experience with real-time updates.",
-    solution: "Implemented custom drag-and-drop with HTML5 DnD API and WebSocket-ready architecture.",
-    color: "from-blue-500 to-indigo-500",
   },
   {
     icon: Bot,
     title: "NeuralStream API",
     category: "AI/ML",
-    description: "RESTful API for neural network predictions with real-time processing and Docker containerization.",
-    tech: ["Python", "TensorFlow", "Docker", "REST API"],
+    description: "RESTful API for neural network predictions with Docker containerization.",
+    tech: ["Python", "TensorFlow", "Docker"],
     github: "https://github.com/Amrit004/NeuralStream-API",
-    challenge: "Building a production-ready ML API with Docker.",
-    solution: "Created a containerized Flask/FastAPI service with TensorFlow integration for real-time predictions.",
-    color: "from-rose-500 to-orange-500",
   },
   {
     icon: Server,
     title: "AI Travel",
     category: "Full-Stack",
-    description: "Full-stack travel booking application with user authentication, booking management, and payment integration.",
+    description: "Full-stack travel booking application with authentication and payment integration.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/Amrit004/AiTravel",
-    challenge: "Building a complete booking platform with payments.",
-    solution: "Implemented JWT auth, MongoDB schemas for bookings, and Stripe integration for payments.",
-    color: "from-teal-500 to-cyan-500",
   },
   {
     icon: Code,
     title: "Mobile App",
-    category: "Mobile Development",
-    description: "Cross-platform mobile application for task management with offline sync and push notifications.",
+    category: "Mobile",
+    description: "Cross-platform mobile application for task management with offline sync.",
     tech: ["React Native", "Expo", "Firebase"],
     github: "https://github.com/Amrit004/MobileApp",
-    challenge: "Building a cross-platform app with offline support.",
-    solution: "Used Expo with Firebase for backend and implemented offline-first architecture with sync.",
-    color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Database,
     title: "Ordering.js",
     category: "Library",
     description: "NPM package for sorting algorithms with visualization and performance benchmarking.",
-    tech: ["JavaScript", "Algorithms", "NPM"],
+    tech: ["JavaScript", "Algorithms"],
     github: "https://github.com/Amrit004/Ordering.Js",
-    challenge: "Creating a performant sorting library with visualization.",
-    solution: "Implemented optimized sorting algorithms with O(n log n) complexity and built a visual demo.",
-    color: "from-yellow-500 to-amber-500",
+  },
+  {
+    icon: BarChart,
+    title: "DevMetrics",
+    category: "Analytics",
+    description: "GitHub analytics tool with contribution heatmap and developer scoring.",
+    tech: ["GitHub API", "Canvas"],
+    github: "https://github.com/Amrit004/DevMetrics",
+    demo: "https://devmetrics.vercel.app",
   },
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
-
   return (
-    <>
-      <section id="projects" className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4 gradient-text">
-              Featured <span className="gradient-text">Projects</span>
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Bridging academic learning with enterprise-grade thinking. Projects built with security-first architecture, real-world inspired challenges, and scalable technologies.
-            </p>
-          </motion.div>
+    <section id="projects" className="py-16">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+          Projects
+        </h2>
+        <p className="text-slate-500 mb-8 max-w-2xl">
+          Selected projects showcasing skills in security, AI/ML, full-stack development, and cloud computing.
+        </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.slice(0, 6).map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="glass-card rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all hover:transform hover:-translate-y-1 cursor-pointer"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className={`h-32 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
-                  <project.icon className="w-16 h-16 text-white opacity-90" />
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium flex items-center gap-2">
-                      <Eye className="w-4 h-4" /> Quick Preview
-                    </span>
-                  </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div key={project.title} className="card hover:border-blue-500 transition-colors">
+              <div className="flex items-start gap-3 mb-3">
+                <project.icon className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+                  <span className="text-sm text-slate-500">{project.category}</span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">{project.title}</h3>
-                  <span className="text-sm text-slate-500 dark:text-slate-500">{project.category}</span>
-                  <p className="text-slate-600 dark:text-slate-400 mt-3 mb-4 text-sm">{project.description.substring(0, 100)}...</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.slice(0, 3).map((t) => (
-                      <span key={t} className="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 text-xs">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <a
-              href="https://github.com/Amrit004"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
-            >
-              View All Projects on GitHub
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      <AnimatePresence>
-        {selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-            onClick={() => setSelectedProject(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className={`h-48 bg-gradient-to-br ${selectedProject.color} flex items-center justify-center relative`}>
-                <selectedProject.icon className="w-20 h-20 text-white opacity-90" />
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors"
-                >
-                  <X className="w-5 h-5 text-white" />
-                </button>
               </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{selectedProject.title}</h3>
-                  {selectedProject.featured && (
-                    <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-medium">
-                      Featured
-                    </span>
-                  )}
-                </div>
-                <span className="text-slate-600 dark:text-slate-400">{selectedProject.category}</span>
-                
-                <p className="text-slate-700 dark:text-slate-300 mt-4">{selectedProject.description}</p>
-
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {selectedProject.tech.map((t) => (
-                    <span key={t} className="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-cyan-400 text-sm">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="space-y-3 mt-6">
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-200/50 dark:bg-slate-800/50">
-                    <Lightbulb className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">Challenge</p>
-                      <p className="text-sm text-slate-700 dark:text-slate-300">{selectedProject.challenge}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-200/50 dark:bg-slate-800/50">
-                    <Rocket className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">Solution</p>
-                      <p className="text-sm text-slate-700 dark:text-slate-300">{selectedProject.solution}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-3 mt-6">
+              
+              <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((t) => (
+                  <span key={t} className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-xs text-slate-600 dark:text-slate-300">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600"
+                >
+                  <Github className="w-4 h-4" />
+                  Code
+                </a>
+                {project.demo && (
                   <a
-                    href={selectedProject.github}
+                    href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-colors text-sm font-medium"
+                    className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600"
                   >
-                    <Github className="w-4 h-4" />
-                    View Code
+                    <ExternalLink className="w-4 h-4" />
+                    Demo
                   </a>
-                  {selectedProject.demo && (
-                    <a
-                      href={selectedProject.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors text-sm"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  )}
-                </div>
+                )}
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="https://github.com/Amrit004"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
+          >
+            View all projects on GitHub
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }

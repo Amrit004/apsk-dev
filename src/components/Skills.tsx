@@ -1,118 +1,66 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Code, Database, Bot, Wrench, Cloud, Shield } from "lucide-react";
+import { Code, Database, Cloud, Shield, Palette, Terminal } from "lucide-react";
 
 const skillCategories = [
   {
     icon: Code,
-    title: "Frontend",
-    skills: [
-      { name: "React.js", level: "Advanced" },
-      { name: "JavaScript (ES6+)", level: "Advanced" },
-      { name: "HTML5/CSS3", level: "Advanced" },
-      { name: "Responsive Design", level: "Advanced" },
-    ],
+    title: "Programming",
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "C#", "HTML", "CSS"],
   },
   {
-    icon: Database,
-    title: "Backend",
-    skills: [
-      { name: "Node.js", level: "Intermediate" },
-      { name: "Express.js", level: "Intermediate" },
-      { name: "REST APIs", level: "Advanced" },
-      { name: "API Integration", level: "Advanced" },
-    ],
+    icon: Terminal,
+    title: "Frameworks",
+    skills: ["React", "Next.js", "Node.js", "Express.js", "REST APIs"],
   },
   {
     icon: Database,
     title: "Databases",
-    skills: [
-      { name: "MongoDB", level: "Intermediate" },
-      { name: "MySQL", level: "Intermediate" },
-      { name: "PostgreSQL", level: "Basic" },
-    ],
-  },
-  {
-    icon: Bot,
-    title: "AI & ML",
-    skills: [
-      { name: "OpenAI API", level: "Intermediate" },
-      { name: "Prompt Engineering", level: "Intermediate" },
-      { name: "Python", level: "Intermediate" },
-    ],
+    skills: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
   },
   {
     icon: Cloud,
     title: "Cloud & DevOps",
-    skills: [
-      { name: "AWS (EC2, S3)", level: "Basic" },
-      { name: "Docker", level: "Basic" },
-      { name: "Vercel", level: "Advanced" },
-      { name: "Git & GitHub", level: "Advanced" },
-    ],
+    skills: ["AWS (EC2, S3, Lambda)", "Docker", "Linux", "CI/CD", "Vercel"],
   },
   {
     icon: Shield,
     title: "Security",
-    skills: [
-      { name: "Security Best Practices", level: "Intermediate" },
-      { name: "OAuth/JWT", level: "Advanced" },
-      { name: "HTTPS/SSL", level: "Advanced" },
-    ],
+    skills: ["Network Security", "IAM", "JWT", "OAuth", "Cryptography"],
+  },
+  {
+    icon: Palette,
+    title: "Tools & Methods",
+    skills: ["Git", "GitHub", "Agile/Scrum", "JIRA", "Figma", "Postman"],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16">
+    <section id="skills" className="py-16 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10"
-        >
-          <h2 className="text-3xl font-bold mb-3 gradient-text">
-            Technical <span className="gradient-text">Skills</span>
-          </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Technologies I work with. Proficiency levels shown for reference.
-          </p>
-        </motion.div>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
+          Skills
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-card rounded-xl p-5 hover:border-cyan-500/30 transition-colors"
-            >
+          {skillCategories.map((category) => (
+            <div key={category.title} className="card">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                  <category.icon className="w-5 h-5 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                <category.icon className="w-5 h-5 text-blue-600" />
+                <h3 className="font-semibold text-slate-900 dark:text-white">{category.title}</h3>
               </div>
-
-              <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center justify-between">
-                    <span className="text-slate-300 text-sm">{skill.name}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full ${
-                      skill.level === 'Advanced' ? 'bg-green-500/20 text-green-400' :
-                      skill.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-slate-500/20 text-slate-400'
-                    }`}>
-                      {skill.level}
-                    </span>
-                  </div>
+                  <span
+                    key={skill}
+                    className="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-sm text-slate-700 dark:text-slate-300"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
