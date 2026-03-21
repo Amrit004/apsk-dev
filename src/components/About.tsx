@@ -43,7 +43,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="card max-w-3xl">
+        <div className="card">
           <p className="text-slate-300 leading-relaxed mb-4">
             I am an MSc Advanced Computer Science student at Queen Mary University of London, graduating in 2026. My BSc in Computer Science from Staffordshire University gave me a strong foundation in software development, and my current studies are deepening my knowledge in cloud architecture, machine learning, and security.
           </p>
