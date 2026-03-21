@@ -8,10 +8,6 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-sm font-medium text-blue-400 mb-2">
-              Open to Work
-            </p>
-
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
               Amritpal Singh Kaur
             </h1>
