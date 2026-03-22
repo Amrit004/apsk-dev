@@ -3,7 +3,7 @@
 import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
 
 const featuredProjects = [
-  { name: "SOC Command Center", desc: "Real-time threat detection dashboard", url: "https://soc-command-center.vercel.app" },
+  { name: "SOC Command Center", desc: "Real-time threat detection dashboard", url: "https://github.com/Amrit004/soc-command-center" },
   { name: "Enterprise Analytics", desc: "AI-powered data visualization", url: "https://enterprise-analytics-dashboard.vercel.app" },
   { name: "SecureVault", desc: "AWS security simulation", url: "https://securevault.vercel.app" },
   { name: "CipherOS", desc: "Browser cryptography toolkit", url: "https://cipheros.vercel.app" },
