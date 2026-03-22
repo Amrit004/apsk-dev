@@ -15,11 +15,24 @@ const navItems = [
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
+
+      const sections = navItems.map(item => item.href.substring(1));
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,7 +58,11 @@ export default function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm text-slate-400 hover:text-white transition-colors"
+                className={`text-sm transition-colors ${
+                  activeSection === item.href.substring(1)
+                    ? "text-blue-400 font-medium"
+                    : "text-slate-400 hover:text-white"
+                }`}
               >
                 {item.name}
               </a>
@@ -69,7 +86,11 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2 text-slate-300 hover:text-white"
+                className={`block py-2 transition-colors ${
+                  activeSection === item.href.substring(1)
+                    ? "text-blue-400"
+                    : "text-slate-300 hover:text-white"
+                }`}
               >
                 {item.name}
               </a>
