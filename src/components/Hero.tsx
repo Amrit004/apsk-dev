@@ -1,6 +1,13 @@
 "use client";
 
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
+
+const featuredProjects = [
+  { name: "SOC Command Center", desc: "Real-time threat detection dashboard", url: "https://soc-command-center.vercel.app" },
+  { name: "Enterprise Analytics", desc: "AI-powered data visualization", url: "https://enterprise-analytics-dashboard.vercel.app" },
+  { name: "SecureVault", desc: "AWS security simulation", url: "https://securevault.vercel.app" },
+  { name: "CipherOS", desc: "Browser cryptography toolkit", url: "https://cipheros.vercel.app" },
+];
 
 export default function Hero() {
   return (
@@ -67,29 +74,33 @@ export default function Hero() {
           </div>
 
           <div className="card">
-            <div className="mb-6">
-              <div className="text-4xl font-bold text-blue-400 mb-1">23</div>
-              <div className="text-slate-400">GitHub Repositories</div>
-            </div>
-            
+            <h3 className="font-semibold text-white mb-4">Featured Projects</h3>
             <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
-                <span className="font-medium text-white">JavaScript</span>
-                <span className="text-sm text-slate-500">40%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
-                <span className="font-medium text-white">TypeScript</span>
-                <span className="text-sm text-slate-500">25%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
-                <span className="font-medium text-white">Python</span>
-                <span className="text-sm text-slate-500">20%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
-                <span className="font-medium text-white">Java</span>
-                <span className="text-sm text-slate-500">15%</span>
-              </div>
+              {featuredProjects.map((project) => (
+                <a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-white group-hover:text-blue-400 transition-colors">{project.name}</span>
+                    <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
+                  </div>
+                  <span className="text-sm text-slate-500">{project.desc}</span>
+                </a>
+              ))}
             </div>
+            <a
+              href="https://github.com/Amrit004"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 mt-4 text-sm"
+            >
+              View all 23 projects on GitHub
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
         </div>
 
