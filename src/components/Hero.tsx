@@ -98,7 +98,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-blue-400 hover:text-blue-300 mt-4 text-sm"
             >
-              View all 23 projects on GitHub
+              View all projects on GitHub
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>

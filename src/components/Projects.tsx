@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Github, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, Server, X } from "lucide-react";
+import { ExternalLink, Github, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, X } from "lucide-react";
 
 const projects = [
   {
@@ -74,7 +74,6 @@ const projects = [
     description: "Nmap/Nessus-style scanner simulation with 4 scan modes (TCP, UDP, SYN, Comprehensive) and comprehensive CVE database.",
     tech: ["Network Security", "CVE Database", "Port Scanning"],
     github: "https://github.com/Amrit004/Netscan-pro",
-    demo: "https://netscan-pro.vercel.app",
     features: [
       "4 scan modes: TCP, UDP, SYN, Comprehensive",
       "100+ CVEs including Log4Shell and EternalBlue",
@@ -131,58 +130,12 @@ const projects = [
     ]
   },
   {
-    icon: Server,
-    title: "AI Travel",
-    category: "Full-Stack",
-    description: "Full-stack travel booking application with user authentication, booking management, and Stripe payment integration.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/Amrit004/AiTravel",
-    features: [
-      "JWT-based user authentication",
-      "MongoDB schemas for bookings",
-      "Stripe payment integration",
-      "Booking management dashboard",
-      "Full CRUD operations"
-    ]
-  },
-  {
-    icon: Code,
-    title: "Mobile App",
-    category: "Mobile",
-    description: "Cross-platform mobile application for task management with offline sync and push notifications.",
-    tech: ["React Native", "Expo", "Firebase"],
-    github: "https://github.com/Amrit004/MobileApp",
-    features: [
-      "Offline-first architecture",
-      "Firebase backend integration",
-      "Push notification support",
-      "Task synchronization",
-      "Cross-platform compatibility"
-    ]
-  },
-  {
-    icon: Database,
-    title: "Ordering.js",
-    category: "Library",
-    description: "NPM package for sorting algorithms with visualization and performance benchmarking.",
-    tech: ["JavaScript", "Algorithms", "NPM"],
-    github: "https://github.com/Amrit004/Ordering.Js",
-    features: [
-      "Optimized sorting algorithms",
-      "O(n log n) complexity",
-      "Visual demonstration tool",
-      "Performance benchmarking",
-      "Published to NPM"
-    ]
-  },
-  {
     icon: BarChart,
     title: "DevMetrics",
     category: "Analytics",
     description: "GitHub analytics tool with contribution heatmap, developer scoring algorithm, and NPM registry statistics.",
     tech: ["GitHub API", "Canvas", "NPM Registry"],
     github: "https://github.com/Amrit004/DevMetrics",
-    demo: "https://devmetrics.vercel.app",
     features: [
       "Real-time GitHub REST API integration",
       "Custom Canvas-based visualizations",
