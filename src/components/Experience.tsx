@@ -9,10 +9,10 @@ const experiences = [
     period: "April 2022 - Present",
     location: "London, UK",
     description: [
-      "Supported enterprise desktop systems in a regulated financial environment",
+      "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
       "Diagnosed and resolved hardware and software issues to minimize downtime",
-      "Led large-scale deployment initiatives for end-users",
-      "Implemented security patches following financial regulations",
+      "Led large-scale deployment initiatives, completing 500+ deployments across the organization",
+      "Implemented security patches in compliance with financial industry regulations",
     ],
   },
   {
@@ -21,9 +21,9 @@ const experiences = [
     period: "Cover Shifts",
     location: "London, UK",
     description: [
-      "Delivered laptop and mobile device replacements with enterprise applications",
-      "Provided escalation support for technical issues",
-      "Maintained documentation of system configurations",
+      "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
+      "Provided escalation support for complex technical issues",
+      "Maintained detailed documentation of system configurations",
     ],
   },
   {
@@ -32,9 +32,10 @@ const experiences = [
     period: "Cover Shifts",
     location: "London, UK",
     description: [
+      "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
       "Provided frontline support for hardware, software, and network issues",
-      "Monitored enterprise system uptime",
-      "Documented troubleshooting procedures",
+      "Monitored enterprise system uptime, maintaining 99.9% stability",
+      "Documented troubleshooting procedures and technical configurations",
     ],
   },
 ];
