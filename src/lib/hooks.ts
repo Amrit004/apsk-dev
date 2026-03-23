@@ -61,18 +61,23 @@ interface UseScrollSpyReturn {
   activeSection: string;
 }
 
-export function useScrollSpy(sectionIds: string[], offset = 100): UseScrollSpyReturn {
-  const [activeSection, setActiveSection] = useState("");
+export function useScrollSpy(sectionIds: string[], offset = 150): UseScrollSpyReturn {
+  const [activeSection, setActiveSection] = useState(sectionIds[0] || "");
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + offset;
-
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sectionIds[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sectionIds[i]);
-          break;
+      const scrollY = window.scrollY;
+      
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop - offset;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollY >= sectionTop && scrollY < sectionBottom) {
+            setActiveSection(sectionId);
+            break;
+          }
         }
       }
     };
