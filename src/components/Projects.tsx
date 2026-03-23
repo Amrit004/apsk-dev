@@ -151,9 +151,9 @@ export default function Projects() {
 
   return (
     <>
-      <section id="projects" className="py-16 bg-slate-900">
+      <section id="projects" className="py-16 bg-slate-950" aria-labelledby="projects-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-white mb-2">
+          <h2 id="projects-heading" className="text-2xl font-bold text-white mb-2">
             Projects
           </h2>
           <p className="text-slate-400 mb-8 max-w-2xl">
