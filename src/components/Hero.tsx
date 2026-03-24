@@ -33,7 +33,7 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href={SOCIAL_LINKS.email}
+                href={SOCIAL_LINKS.cv}
                 download="Amritpal-Singh-Kaur-CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white font-medium transition-colors"
               >

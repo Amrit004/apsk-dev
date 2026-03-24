@@ -33,6 +33,7 @@ export const SOCIAL_LINKS = {
   github: "https://github.com/Amrit004",
   linkedin: "https://linkedin.com/in/amritpal-singh-kaur-b54b9a1b1",
   email: "mailto:ap.singhkaur@gmail.com",
+  cv: "/cv.pdf",
 } as const;
 
 export const FEATURED_PROJECTS = [
