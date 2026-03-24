@@ -13,6 +13,8 @@
 
 </div>
 
+![Portfolio Screenshot](screenshot.png)
+
 ---
 
 A modern, professional portfolio website showcasing enterprise experience at Bank of America, Amadeus & ENI, along with MSc Security & Authentication from Queen Mary University of London.
