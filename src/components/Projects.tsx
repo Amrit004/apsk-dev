@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Github, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, X } from "lucide-react";
+import { ExternalLink, Github, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, X, FileCode } from "lucide-react";
 
 const projects = [
   {
@@ -127,6 +127,21 @@ const projects = [
       "Real-time prediction processing",
       "Docker Compose deployment ready",
       "RESTful API endpoints"
+    ]
+  },
+  {
+    icon: FileCode,
+    title: "Lightweight Verifier",
+    category: "Formal Methods",
+    description: "Pure-Python CTL model checker with Kripke structure support, counterexample generation, and lasso detection.",
+    tech: ["Python", "Formal Verification", "CTL", "Algorithms"],
+    github: "https://github.com/Amrit004/Lightweight-Software-Verification-Tool",
+    features: [
+      "34/34 tests passing — full CTL operator coverage",
+      "Nested counterexample generation for AG(p→AF q)",
+      "Kosaraju's SCC algorithm for liveness properties",
+      "Fixed-point computation for model checking",
+      "Zero dependencies — pure Python 3.10+"
     ]
   },
   {

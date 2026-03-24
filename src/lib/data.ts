@@ -19,7 +19,7 @@ export const HIGHLIGHTS = [
   {
     icon: Code2,
     title: "Repositories",
-    description: "10 public projects on GitHub",
+    description: "11 public projects on GitHub",
   },
 ] as const;
 
