@@ -56,7 +56,7 @@ export const EXPERIENCE = [
     company: "Brock Solutions",
     role: "Onsite Software Specialist",
     period: "April 2026 - Present",
-    location: "Kitchener, ON",
+    location: "Heathrow Airport, London",
     bullets: [
       "Troubleshoot software bugs, application deficiencies, and performance issues for industrial automation systems",
       "Serve as first point of contact for technical incidents, quickly identifying problems to reduce end user impact",
@@ -71,6 +71,7 @@ export const EXPERIENCE = [
     role: "Deployment / Breakfix Engineer",
     period: "April 2022 - April 2026",
     location: "London, UK",
+    subtext: "Employed by Manpower (Zoom IT)",
     bullets: [
       "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
       "Diagnosed and resolved hardware and software issues to minimize downtime",
@@ -83,6 +84,7 @@ export const EXPERIENCE = [
     role: "Field Support Technician (Level 2)",
     period: "April 2022 - April 2026",
     location: "London, UK",
+    subtext: "Employed by Manpower (Zoom IT)",
     bullets: [
       "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
       "Provided escalation support for complex technical issues",
@@ -94,6 +96,7 @@ export const EXPERIENCE = [
     role: "IT Technician / Support",
     period: "April 2022 - April 2026",
     location: "London, UK",
+    subtext: "Employed by Manpower (Zoom IT)",
     bullets: [
       "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
       "Provided frontline support for hardware, software, and network issues",
