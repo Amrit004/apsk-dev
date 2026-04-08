@@ -81,7 +81,7 @@ export const EXPERIENCE = [
   {
     company: "Amadeus",
     role: "Field Support Technician (Level 2)",
-    period: "Cover Shifts",
+    period: "April 2022 - April 2026",
     location: "London, UK",
     bullets: [
       "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
@@ -92,7 +92,7 @@ export const EXPERIENCE = [
   {
     company: "ENI",
     role: "IT Technician / Support",
-    period: "Cover Shifts",
+    period: "April 2022 - April 2026",
     location: "London, UK",
     bullets: [
       "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
