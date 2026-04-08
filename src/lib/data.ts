@@ -2,7 +2,7 @@ import React from "react";
 import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Building2, Calendar, MapPin, GraduationCap as GradIcon, Award, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal } from "lucide-react";
 
 export const HIGHLIGHTS = [
-  { icon: Briefcase, title: "Enterprise Experience", description: "Bank of America, Amadeus & ENI" },
+  { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions, Bank of America, Amadeus & ENI" },
   { icon: Globe, title: "Languages", description: "English, Spanish, Catalan, Punjabi, Hindi" },
   { icon: GraduationCap, title: "Education", description: "MSc QMUL, BSc Staffordshire (2:1)" },
   { icon: Code2, title: "Repositories", description: "11 public projects on GitHub" },
@@ -29,7 +29,7 @@ export const FEATURED_PROJECTS = [
 ] as const;
 
 export const STATS = [
-  { value: 3, label: "Enterprise Companies" },
+  { value: 4, label: "Enterprise Companies" },
   { value: 2, label: "CS Degrees" },
   { value: 5, label: "Languages" },
 ] as const;
@@ -53,9 +53,23 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
+    company: "Brock Solutions",
+    role: "Onsite Software Specialist",
+    period: "April 2026 - Present",
+    location: "Kitchener, ON",
+    bullets: [
+      "Troubleshoot software bugs, application deficiencies, and performance issues for industrial automation systems",
+      "Serve as first point of contact for technical incidents, quickly identifying problems to reduce end user impact",
+      "Provide excellent customer service through thorough and diligent communication and updates",
+      "Collaborate with cross-functional teams to analyze, document, and recommend improvements to products",
+      "Contribute to Service Team knowledge base through documentation and knowledge articles",
+      "Support enterprise systems including Windows Servers, SQL databases, Azure cloud, and industrial automation interfaces",
+    ],
+  },
+  {
     company: "Bank of America",
     role: "Deployment / Breakfix Engineer",
-    period: "April 2022 - Present",
+    period: "April 2022 - April 2026",
     location: "London, UK",
     bullets: [
       "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
