@@ -51,7 +51,14 @@ export const EDUCATION = [
   },
 ] as const;
 
-export const EXPERIENCE = [
+export const EXPERIENCE: Array<{
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  subtext?: string;
+  bullets: string[];
+}> = [
   {
     company: "Brock Solutions",
     role: "Onsite Software Specialist",
