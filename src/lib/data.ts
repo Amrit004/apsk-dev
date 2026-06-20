@@ -61,7 +61,7 @@ export const EXPERIENCE: Array<{
 }> = [
   {
     company: "Brock Solutions",
-    role: "Onsite Software Specialist",
+    role: "Onsite Software Support Specialist",
     period: "April 2026 - Present",
     location: "Heathrow Airport, London",
     bullets: [
