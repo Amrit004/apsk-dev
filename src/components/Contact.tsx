@@ -13,7 +13,7 @@ export default function Contact() {
     <section id="contact" className="py-16 bg-slate-950">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl font-bold text-white mb-2">Contact</h2>
-        <p className="text-slate-400 mb-8">Looking for a graduate software engineer? Let me know if you are interested.</p>
+        <p className="text-slate-400 mb-8">Currently at Heathrow Airport. Feel free to reach out!</p>
         <div className="grid lg:grid-cols-2 gap-8">
           <div>
             <div className="card mb-6">
@@ -26,8 +26,8 @@ export default function Contact() {
               </div>
             </div>
             <div className="card">
-              <h3 className="font-semibold text-white mb-2">Availability</h3>
-              <p className="text-slate-400 text-sm">Available for graduate software engineering roles from Summer 2026. Open to opportunities in cloud, DevOps, data, and cybersecurity.</p>
+              <h3 className="font-semibold text-white mb-2">Currently</h3>
+              <p className="text-slate-400 text-sm">Onsite Software Support Specialist at Brock Solutions, based at Heathrow Airport. Open to connecting.</p>
             </div>
           </div>
           <div className="card">
