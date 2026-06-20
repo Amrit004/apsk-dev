@@ -12,6 +12,7 @@ export const KEY_STRENGTHS = [
   "Full-stack development with JavaScript, TypeScript, and Python",
   "Cloud infrastructure and deployment using AWS and Docker",
   "Security-focused approach with experience in regulated environments",
+  "Real-time operations support and incident management in mission-critical airport environments",
 ] as const;
 
 export const SOCIAL_LINKS = {
@@ -115,10 +116,10 @@ export const EXPERIENCE: Array<{
 export const SKILLS = [
   { icon: CodeIcon, title: "Programming", skills: ["JavaScript", "TypeScript", "Python", "Java", "C#", "HTML", "CSS"] },
   { icon: Terminal, title: "Frameworks", skills: ["React", "Next.js", "Node.js", "Express.js", "REST APIs"] },
-  { icon: DBIcon, title: "Databases", skills: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"] },
-  { icon: Cloud, title: "Cloud & DevOps", skills: ["AWS (EC2, S3, Lambda)", "Docker", "Linux", "CI/CD", "Vercel"] },
+  { icon: DBIcon, title: "Databases", skills: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "SQL Server"] },
+  { icon: Cloud, title: "Cloud & DevOps", skills: ["AWS (EC2, S3, Lambda)", "Azure", "Docker", "Linux", "Windows Server", "CI/CD", "Vercel"] },
   { icon: ShieldIcon, title: "Security", skills: ["Network Security", "IAM", "JWT", "OAuth", "Cryptography"] },
-  { icon: Palette, title: "Tools & Methods", skills: ["Git", "GitHub", "Agile/Scrum", "JIRA", "Figma", "Postman"] },
+  { icon: Palette, title: "Tools & Methods", skills: ["Git", "GitHub", "Agile/Scrum", "JIRA", "Figma", "Postman", "Industrial Automation"] },
 ] as const;
 
 export type Project = {
