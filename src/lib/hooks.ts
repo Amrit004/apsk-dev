@@ -12,8 +12,9 @@ export function useScroll(threshold = 50, sectionIds: string[] = [], spyOffset =
       for (const sectionId of sectionIds) {
         const section = document.getElementById(sectionId);
         if (section) {
-          const top = section.offsetTop - spyOffset;
-          if (currentY >= top && currentY < top + section.offsetHeight) {
+          const rect = section.getBoundingClientRect();
+          const top = rect.top + window.scrollY - spyOffset;
+          if (currentY >= top && currentY < top + rect.height) {
             setActiveSection(sectionId);
             break;
           }
