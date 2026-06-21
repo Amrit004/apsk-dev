@@ -1,10 +1,10 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
-import { useScrollPosition } from "@/lib/hooks";
+import { useScroll } from "@/lib/hooks";
 
 export default function BackToTop() {
-  const { scrollY } = useScrollPosition(0);
+  const { scrollY } = useScroll(0, []);
   if (scrollY <= 500) return null;
 
   return (

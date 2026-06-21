@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Building2, Calendar, MapPin, GraduationCap as GradIcon, Award, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal } from "lucide-react";
+import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal } from "lucide-react";
 
 export const HIGHLIGHTS = [
   { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions, Bank of America, Amadeus & ENI" },
@@ -79,7 +79,7 @@ export const EXPERIENCE: Array<{
     role: "Deployment / Breakfix Engineer",
     period: "April 2022 - April 2026",
     location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT)",
+    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
     bullets: [
       "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
       "Diagnosed and resolved hardware and software issues to minimize downtime",
@@ -92,7 +92,7 @@ export const EXPERIENCE: Array<{
     role: "Field Support Technician (Level 2)",
     period: "April 2022 - April 2026",
     location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT)",
+    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
     bullets: [
       "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
       "Provided escalation support for complex technical issues",
@@ -104,7 +104,7 @@ export const EXPERIENCE: Array<{
     role: "IT Technician / Support",
     period: "April 2022 - April 2026",
     location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT)",
+    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
     bullets: [
       "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
       "Provided frontline support for hardware, software, and network issues",

@@ -1,7 +1,6 @@
-"use client";
-
 import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
 import { FEATURED_PROJECTS, SOCIAL_LINKS, STATS } from "@/lib/data";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 export default function Hero() {
   return (
@@ -36,7 +35,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex justify-center gap-16 mt-12 pt-8 border-t border-slate-800">
-          {STATS.map((s) => <div key={s.label} className="text-center"><div className="text-2xl font-bold text-white">{s.value}</div><div className="text-sm text-slate-500">{s.label}</div></div>)}
+          {STATS.map((s) => <AnimatedCounter key={s.label} value={s.value} label={s.label} />)}
         </div>
       </div>
     </section>

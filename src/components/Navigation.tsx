@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useScrollPosition, useScrollSpy } from "@/lib/hooks";
+import { useScroll } from "@/lib/hooks";
 import { NAV_ITEMS, SECTION_IDS } from "@/lib/utils";
 
 export default function Navigation() {
-  const { isScrolled } = useScrollPosition(50);
-  const { activeSection } = useScrollSpy(SECTION_IDS);
+  const { isScrolled, activeSection } = useScroll(50, SECTION_IDS);
   const [mobile, setMobile] = useState(false);
 
   return (
@@ -19,17 +18,17 @@ export default function Navigation() {
             {NAV_ITEMS.map((item) => {
               const id = item.href.substring(1);
               return (
-                <a key={item.name} href={item.href} className={`text-sm font-medium transition-all duration-200 relative ${activeSection === id ? "text-blue-400" : "text-slate-400 hover:text-white"}`} aria-current={activeSection === id ? "page" : undefined}>
+                <a key={item.name} href={item.href} className={`text-sm font-medium transition-all duration-200 relative ${activeSection === id ? "text-blue-400" : "text-slate-400 hover:text-white"}`} aria-current={activeSection === id ? "true" : undefined}>
                   {item.name}
                   {activeSection === id && <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full" />}
                 </a>
               );
             })}
           </div>
-          <button onClick={() => setMobile(!mobile)} className="md:hidden p-2 text-slate-300 hover:text-white" aria-label={mobile ? "Close menu" : "Open menu"}>{mobile ? <X size={24} /> : <Menu size={24} />}</button>
+          <button onClick={() => setMobile(!mobile)} className="md:hidden p-2 text-slate-300 hover:text-white" aria-label={mobile ? "Close menu" : "Open menu"} aria-expanded={mobile} aria-controls="mobile-menu">{mobile ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
         {mobile && (
-          <div className="md:hidden mt-4 pb-4 border-t border-slate-800 pt-4">
+          <div id="mobile-menu" className="md:hidden mt-4 pb-4 border-t border-slate-800 pt-4">
             {NAV_ITEMS.map((item) => (
               <a key={item.name} href={item.href} onClick={() => setMobile(false)} className={`block py-3 text-base font-medium transition-colors ${activeSection === item.href.substring(1) ? "text-blue-400" : "text-slate-300 hover:text-white"}`}>{item.name}</a>
             ))}

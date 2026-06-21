@@ -20,12 +20,14 @@ export const metadata: Metadata = {
     siteName: "APSK Portfolio",
     locale: "en_GB",
     type: "website",
+    images: [{ url: "https://apsk-dev.vercel.app/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
     description: "Multilingual Graduate Software Engineer - Open to Work Summer 2026",
     creator: "@Amrit004",
+    images: ["https://apsk-dev.vercel.app/og-image.png"],
   },
   robots: {
     index: true,
@@ -50,6 +52,7 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://apsk-dev.vercel.app" />
         <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Crect width='48' height='32' rx='4' fill='%233b82f6'/%3E%3Ctext x='24' y='22' font-family='Arial' font-size='14' font-weight='bold' fill='white' text-anchor='middle'%3EAPSK%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+        <link rel="alternate" hrefLang="en" href="https://apsk-dev.vercel.app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
@@ -59,7 +62,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Amritpal Singh Kaur",
               "url": "https://apsk-dev.vercel.app",
-              "jobTitle": "Graduate Software Engineer",
+              "jobTitle": "Onsite Software Support Specialist",
               "email": "ap.singhkaur@gmail.com",
               "address": {
                 "@type": "PostalAddress",
@@ -83,6 +86,7 @@ export default function RootLayout({
                 }
               ],
               "worksFor": [
+                { "@type": "Organization", "name": "Brock Solutions" },
                 { "@type": "Organization", "name": "Bank of America" },
                 { "@type": "Organization", "name": "Amadeus" },
                 { "@type": "Organization", "name": "ENI" }

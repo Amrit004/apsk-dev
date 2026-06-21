@@ -1,5 +1,3 @@
-"use client";
-
 import { Building2, Calendar, MapPin } from "lucide-react";
 import { EXPERIENCE } from "@/lib/data";
 

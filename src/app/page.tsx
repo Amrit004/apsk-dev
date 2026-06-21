@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import BackToTop from "@/components/BackToTop";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -16,12 +17,12 @@ export default function Home() {
       </header>
       <main id="main-content" role="main" aria-label="Main content" className="min-h-screen">
         <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <ScrollReveal><About /></ScrollReveal>
+        <ScrollReveal><Education /></ScrollReveal>
+        <ScrollReveal><Experience /></ScrollReveal>
+        <ScrollReveal><Projects /></ScrollReveal>
+        <ScrollReveal><Skills /></ScrollReveal>
+        <ScrollReveal><Contact /></ScrollReveal>
       </main>
       <BackToTop />
     </>

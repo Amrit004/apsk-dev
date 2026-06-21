@@ -1,36 +1,49 @@
-"use client";
+import { useState, useEffect } from "react";
 
-import { useState, useEffect, RefObject } from "react";
-
-export function useScrollPosition(threshold = 50) {
+export function useScroll(threshold = 50, sectionIds: string[] = [], spyOffset = 150) {
   const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  return { scrollY, isScrolled: scrollY > threshold };
-}
-
-export function useScrollSpy(sectionIds: string[], offset = 150) {
   const [activeSection, setActiveSection] = useState(sectionIds[0] || "");
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
+      const currentY = window.scrollY;
+      setScrollY(currentY);
+
       for (const sectionId of sectionIds) {
         const section = document.getElementById(sectionId);
         if (section) {
-          const top = section.offsetTop - offset;
-          if (scrollY >= top && scrollY < top + section.offsetHeight) {
+          const top = section.offsetTop - spyOffset;
+          if (currentY >= top && currentY < top + section.offsetHeight) {
             setActiveSection(sectionId);
             break;
           }
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sectionIds, offset]);
-  return { activeSection };
+  }, [threshold, sectionIds.join(","), spyOffset]);
+
+  return { scrollY, isScrolled: scrollY > threshold, activeSection };
+}
+
+export function useInView(options?: IntersectionObserverInit) {
+  const [ref, setRef] = useState<HTMLElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setInView(true);
+        observer.unobserve(ref);
+      }
+    }, options);
+    observer.observe(ref);
+    return () => observer.disconnect();
+  }, [ref, options?.threshold, options?.rootMargin]);
+
+  return { ref: setRef, inView };
 }

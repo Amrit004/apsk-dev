@@ -1,5 +1,3 @@
-"use client";
-
 import { GraduationCap, Calendar, Award } from "lucide-react";
 import { EDUCATION } from "@/lib/data";
 

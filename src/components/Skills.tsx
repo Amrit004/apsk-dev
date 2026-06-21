@@ -1,5 +1,3 @@
-"use client";
-
 import { SKILLS } from "@/lib/data";
 
 export default function Skills() {
