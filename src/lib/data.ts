@@ -29,12 +29,6 @@ export const FEATURED_PROJECTS = [
   { name: "CipherOS", desc: "Browser cryptography toolkit", url: "https://cipheros.vercel.app" },
 ] as const;
 
-export const STATS = [
-  { value: 4, label: "Enterprise Companies" },
-  { value: 2, label: "CS Degrees" },
-  { value: 5, label: "Languages" },
-] as const;
-
 export const EDUCATION = [
   {
     school: "Queen Mary University of London",

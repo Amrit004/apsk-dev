@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
-import { FEATURED_PROJECTS, SOCIAL_LINKS, STATS } from "@/lib/data";
-import AnimatedCounter from "@/components/AnimatedCounter";
+import { FEATURED_PROJECTS, SOCIAL_LINKS } from "@/lib/data";
+
 
 export default function Hero() {
   return (
@@ -34,9 +34,7 @@ export default function Hero() {
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 hover:text-blue-300 mt-4 text-sm transition-colors">View all projects on GitHub <ExternalLink className="w-3 h-3" /></a>
           </div>
         </div>
-        <div className="flex justify-center gap-16 mt-12 pt-8 border-t border-slate-800">
-          {STATS.map((s) => <AnimatedCounter key={s.label} value={s.value} label={s.label} />)}
-        </div>
+
       </div>
     </section>
   );
