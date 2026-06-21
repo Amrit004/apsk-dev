@@ -1,11 +1,26 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { ExternalLink, Github, X } from "lucide-react";
 import { PROJECTS, type Project } from "@/lib/data";
 
+const CATEGORY_GROUPS = [
+  { label: "All", match: () => true },
+  { label: "Security", match: (c: string) => ["Cybersecurity", "Cloud Security", "Cryptography", "Network Security"].includes(c) },
+  { label: "Analytics", match: (c: string) => ["Data Analytics", "Analytics"].includes(c) },
+  { label: "AI / ML", match: (c: string) => c === "AI/ML" },
+  { label: "PWA", match: (c: string) => c === "PWA" },
+  { label: "Dev Tools", match: (c: string) => ["Project Management", "Formal Methods"].includes(c) },
+] as const;
+
 export default function Projects() {
+  const [filter, setFilter] = useState<string>("All");
   const [selected, setSelected] = useState<Project | null>(null);
+
+  const filtered = useMemo(
+    () => PROJECTS.filter((p) => CATEGORY_GROUPS.find((g) => g.label === filter)?.match(p.category)),
+    [filter]
+  );
 
   const close = useCallback(() => setSelected(null), []);
 
@@ -32,9 +47,27 @@ export default function Projects() {
       <section id="projects" className="py-16 bg-slate-950" aria-labelledby="projects-heading">
         <div className="max-w-6xl mx-auto px-6">
           <h2 id="projects-heading" className="text-2xl font-bold text-white mb-2">Projects</h2>
-          <p className="text-slate-400 mb-8">Selected projects showcasing skills in security, AI/ML, full-stack development, and cloud computing.</p>
+          <p className="text-slate-400 mb-6">Selected projects showcasing skills in security, AI/ML, full-stack development, and cloud computing.</p>
+
+          <div className="flex flex-wrap gap-2 mb-8" role="group" aria-label="Filter projects by category">
+            {CATEGORY_GROUPS.map((g) => (
+              <button
+                key={g.label}
+                onClick={() => setFilter(g.label)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  filter === g.label
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700"
+                }`}
+                aria-pressed={filter === g.label}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PROJECTS.map((p) => (
+            {filtered.map((p) => (
               <button key={p.title} onClick={() => setSelected(p)} className="card text-left hover:border-blue-500 transition-colors cursor-pointer w-full" aria-label={`View details for ${p.title}`}>
                 <div className="flex items-start gap-3 mb-3">
                   <p.icon className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
@@ -50,6 +83,11 @@ export default function Projects() {
               </button>
             ))}
           </div>
+
+          {filtered.length === 0 && (
+            <p className="text-center text-slate-500 py-12">No projects in this category yet.</p>
+          )}
+
           <div className="mt-8 text-center">
             <a href="https://github.com/Amrit004" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
               View all projects on GitHub <ExternalLink className="w-4 h-4" />
