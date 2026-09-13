@@ -2,7 +2,7 @@ import React from "react";
 import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal } from "lucide-react";
 
 export const HIGHLIGHTS = [
-  { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions, Bank of America, Amadeus & ENI" },
+  { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions + Manpower (Zoom IT): BOA, Amadeus & ENI" },
   { icon: Globe, title: "Languages", description: "English, Spanish, Catalan, Punjabi, Hindi" },
   { icon: GraduationCap, title: "Education", description: "MSc QMUL, BSc Staffordshire (2:1)" },
   { icon: Code2, title: "Repositories", description: "11 public projects on GitHub" },
@@ -46,6 +46,12 @@ export const EDUCATION = [
   },
 ] as const;
 
+export type ExperienceRole = {
+  client: string;
+  role: string;
+  bullets: string[];
+};
+
 export const EXPERIENCE: Array<{
   company: string;
   role: string;
@@ -53,6 +59,7 @@ export const EXPERIENCE: Array<{
   location: string;
   subtext?: string;
   bullets: string[];
+  roles?: ExperienceRole[];
 }> = [
   {
     company: "Brock Solutions",
@@ -60,49 +67,55 @@ export const EXPERIENCE: Array<{
     period: "April 2026 - Present",
     location: "Heathrow Airport, London",
     bullets: [
-      "Troubleshoot software bugs, application deficiencies, and performance issues for industrial automation systems",
-      "Serve as first point of contact for technical incidents, quickly identifying problems to reduce end user impact",
-      "Provide excellent customer service through thorough and diligent communication and updates",
-      "Collaborate with cross-functional teams to analyze, document, and recommend improvements to products",
-      "Contribute to Service Team knowledge base through documentation and knowledge articles",
-      "Support enterprise systems including Windows Servers, SQL databases, Azure cloud, and industrial automation interfaces",
+      "Troubleshoot software bugs, application deficiencies, and performance issues for mission-critical baggage handling systems (BHS) supporting 24/7 Heathrow operations",
+      "Investigate and resolve incidents by reviewing system and application logs and analysing SQL baggage database (BODB) records, applying targeted fixes to restore service with minimal passenger disruption",
+      "Serve as first point of contact for technical incidents, triaging by business impact and keeping critical systems within tight SLAs and low mean-time-to-resolution",
+      "Perform root cause analysis on recurring faults and implement permanent fixes, materially reducing repeat incidents and unplanned downtime",
+      "Collaborate with cross-functional teams and vendors to analyse, document, and drive improvements to products and interfaces",
+      "Create and refine runbooks, knowledge articles, and diagnostic scripts to automate routine checks and accelerate incident resolution",
+      "Support enterprise systems including Windows Servers, SQL databases, Azure cloud, and industrial automation interfaces aligned with airline baggage-tracking compliance (IATA Resolution 753)",
     ],
   },
   {
-    company: "Bank of America",
-    role: "Deployment / Breakfix Engineer",
+    company: "Manpower (Zoom IT)",
+    role: "IT Support Engineer — Onsite Consultant",
     period: "April 2022 - April 2026",
     location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
+    subtext:
+      "Onsite Manpower consultant delivering enterprise IT deployment and support for three enterprise clients",
     bullets: [
-      "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
-      "Diagnosed and resolved hardware and software issues to minimize downtime",
-      "Led large-scale deployment initiatives, completing 500+ deployments across the organization",
-      "Implemented security patches in compliance with financial industry regulations",
+      "Delivered enterprise IT deployment and support services across regulated finance, global travel-tech, and energy sectors",
+      "Managed multiple SLA-bound workloads and competing priorities across three high-security client environments",
     ],
-  },
-  {
-    company: "Amadeus",
-    role: "Field Support Technician (Level 2)",
-    period: "April 2022 - April 2026",
-    location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
-    bullets: [
-      "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
-      "Provided escalation support for complex technical issues",
-      "Maintained detailed documentation of system configurations",
-    ],
-  },
-  {
-    company: "ENI",
-    role: "IT Technician / Support",
-    period: "April 2022 - April 2026",
-    location: "London, UK",
-    subtext: "Employed by Manpower (Zoom IT) — concurrent contract placements",
-    bullets: [
-      "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
-      "Provided frontline support for hardware, software, and network issues",
-      "Monitored enterprise system uptime, maintaining 99.9% stability",
+    roles: [
+      {
+        client: "Bank of America",
+        role: "Deployment / Breakfix Engineer",
+        bullets: [
+          "Supported 100+ end users across enterprise desktop systems in a regulated financial environment",
+          "Diagnosed and resolved hardware and software issues to minimize downtime",
+          "Led large-scale deployment initiatives, completing 500+ deployments across the organization",
+          "Implemented security patches in compliance with financial industry regulations",
+        ],
+      },
+      {
+        client: "Amadeus",
+        role: "Field Support Technician (Level 2)",
+        bullets: [
+          "Delivered laptop and mobile device replacements with enterprise applications for travel tech operations",
+          "Provided escalation support for complex technical issues",
+          "Maintained detailed documentation of system configurations",
+        ],
+      },
+      {
+        client: "ENI",
+        role: "IT Technician / Support",
+        bullets: [
+          "Assisted in Windows 11 migration, ensuring full working stability across energy infrastructure systems",
+          "Provided frontline support for hardware, software, and network issues",
+          "Monitored enterprise system uptime, maintaining 99.9% stability",
+        ],
+      },
     ],
   },
 ] as const;

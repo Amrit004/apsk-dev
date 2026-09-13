@@ -1,4 +1,4 @@
-import { Building2, Calendar, MapPin } from "lucide-react";
+import { Briefcase, Building2, Calendar, MapPin } from "lucide-react";
 import { EXPERIENCE } from "@/lib/data";
 
 export default function Experience() {
@@ -17,6 +17,16 @@ export default function Experience() {
                 </div>
               </div>
               <ul className="space-y-2">{exp.bullets.map((b, i) => <li key={i} className="flex items-start gap-3 text-slate-300"><span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />{b}</li>)}</ul>
+              {exp.roles && (
+                <div className="mt-6 space-y-5 border-t border-slate-800 pt-5">
+                  {exp.roles.map((r) => (
+                    <div key={r.client}>
+                      <div className="flex flex-wrap items-center gap-2 mb-2"><Briefcase className="w-4 h-4 text-blue-400" /><h4 className="font-semibold text-white">{r.client}</h4><span className="text-sm text-slate-400">&middot; {r.role}</span></div>
+                      <ul className="space-y-2 pl-6">{r.bullets.map((b, i) => <li key={i} className="flex items-start gap-3 text-slate-300"><span className="w-1 h-1 rounded-full bg-slate-500 mt-2 flex-shrink-0" />{b}</li>)}</ul>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
