@@ -54,6 +54,17 @@ export type ExperienceRole = {
   bullets: string[];
 };
 
+export type CustomerSuccessRole = {
+  title: string;
+  bullets: string[];
+};
+
+export type CustomerSuccessBlock = {
+  title: string;
+  summary: string[];
+  roles: CustomerSuccessRole[];
+};
+
 export const EXPERIENCE: Array<{
   company: string;
   role: string;
@@ -62,6 +73,7 @@ export const EXPERIENCE: Array<{
   subtext?: string;
   bullets: string[];
   roles?: ExperienceRole[];
+  customerSuccess?: CustomerSuccessBlock;
 }> = [
   {
     company: "Brock Solutions",
@@ -77,6 +89,35 @@ export const EXPERIENCE: Array<{
       "Create and refine runbooks, knowledge articles, and diagnostic scripts to automate routine checks and accelerate incident resolution",
       "Support enterprise systems including Windows Servers, SQL databases, Azure cloud, and industrial automation interfaces aligned with airline baggage-tracking compliance (IATA Resolution 753)",
     ],
+    customerSuccess: {
+      title: "Customer Success & International Delivery",
+      summary: [
+        "Monthly service reviews with airline stakeholders",
+        "Incident and problem follow-up through to resolution",
+        "On-site product training in Mexico and Spain, delivered in Spanish",
+        "Customer relationship management and escalation handling",
+      ],
+      roles: [
+        {
+          title: "Customer Success Manager — Airline Account",
+          bullets: [
+            "Serve as Customer Success Manager for the airline account, running monthly service reviews with customer stakeholders to confirm everything is on track and review any issues from the previous month.",
+            "Track open problems and agreed actions through to resolution, escalating where needed and keeping the customer informed.",
+            "Act as the main point of contact between the airline and the technical/support team, making sure customer concerns are understood and addressed.",
+            "Build strong customer relationships and ensure the customer feels supported, informed, and confident in the service.",
+          ],
+        },
+        {
+          title: "International Product Training — Mexico & Spain",
+          bullets: [
+            "Travelled on-site to Mexico and Spain to train airline and airport staff on the system.",
+            "Delivered training in Spanish, teaching users how the product works and answering their questions and concerns directly.",
+            "Helped local teams feel confident using the system, adapting explanations to different user needs and levels of technical knowledge.",
+            "Acted as the on-the-ground point of contact during the rollout, making sure staff knew who to ask when they needed help.",
+          ],
+        },
+      ],
+    },
   },
   {
     company: "Manpower (Zoom IT)",
@@ -121,36 +162,6 @@ export const EXPERIENCE: Array<{
     ],
   },
 ] as const;
-
-export const CUSTOMER_SUCCESS = {
-  title: "Customer Success & International Delivery",
-  summary: [
-    "Monthly service reviews with airline stakeholders",
-    "Incident and problem follow-up through to resolution",
-    "On-site product training in Mexico and Spain, delivered in Spanish",
-    "Customer relationship management and escalation handling",
-  ],
-  roles: [
-    {
-      title: "Customer Success Manager — Airline Account",
-      bullets: [
-        "Serve as Customer Success Manager for the airline account, running monthly service reviews with customer stakeholders to confirm everything is on track and review any issues from the previous month.",
-        "Track open problems and agreed actions through to resolution, escalating where needed and keeping the customer informed.",
-        "Act as the main point of contact between the airline and the technical/support team, making sure customer concerns are understood and addressed.",
-        "Build strong customer relationships and ensure the customer feels supported, informed, and confident in the service.",
-      ],
-    },
-    {
-      title: "International Product Training — Mexico & Spain",
-      bullets: [
-        "Travelled on-site to Mexico and Spain to train airline and airport staff on the system.",
-        "Delivered training in Spanish, teaching users how the product works and answering their questions and concerns directly.",
-        "Helped local teams feel confident using the system, adapting explanations to different user needs and levels of technical knowledge.",
-        "Acted as the on-the-ground point of contact during the rollout, making sure staff knew who to ask when they needed help.",
-      ],
-    },
-  ],
-} as const;
 
 export const SKILLS = [
   { icon: CodeIcon, title: "Programming", skills: ["JavaScript", "TypeScript", "Python", "Java", "C#", "HTML", "CSS"] },
