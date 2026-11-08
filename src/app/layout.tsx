@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Amritpal Singh Kaur | Software Support Specialist",
-  description: "Software Support Specialist at Brock Solutions (Heathrow) with enterprise IT experience at Bank of America, Amadeus & ENI. MSc Advanced Computer Science graduate (Merit), Queen Mary University of London.",
-  keywords: ["Software Support Specialist", "IT Support Engineer", "Incident Management", "Brock Solutions", "SmartSuite", "Heathrow", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "SQL", "Azure", "Windows Server", "JavaScript", "TypeScript", "Python", "React", "Next.js", "Cybersecurity"],
+  title: "Amritpal Singh Kaur | Software Support & Customer Success",
+  description: "Software Support Specialist and Customer Success Manager for an airline account at Brock Solutions, Heathrow. MSc Advanced Computer Science graduate (Merit), QMUL. Enterprise IT experience at Bank of America, Amadeus & ENI, international training delivered in Spanish.",
+  keywords: ["Software Support Specialist", "Customer Success Manager", "Technical Account Manager", "IT Support Engineer", "Incident Management", "Brock Solutions", "SmartSuite", "Heathrow", "Airline Operations", "Baggage Handling Systems", "IATA Resolution 753", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "SQL", "Azure", "Windows Server", "JavaScript", "TypeScript", "Python", "React", "Next.js", "Cybersecurity", "Spanish", "Multilingual"],
   authors: [{ name: "Amritpal Singh Kaur" }],
   creator: "Amritpal Singh Kaur",
   publisher: "Amritpal Singh Kaur",
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: "Amritpal Singh Kaur | Software Support Specialist",
-    description: "Onsite Software Support Specialist at Brock Solutions, Heathrow, supporting mission-critical baggage systems. MSc Advanced Computer Science graduate (Merit), QMUL.",
+    title: "Amritpal Singh Kaur | Software Support & Customer Success",
+    description: "Onsite Software Support Specialist and Customer Success Manager (airline account) at Brock Solutions, Heathrow. MSc Advanced Computer Science (Merit), QMUL. International training delivered in Spanish.",
     url: "https://apsk-dev.vercel.app",
     siteName: "APSK Portfolio",
     locale: "en_GB",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amritpal Singh Kaur | Software Support Specialist",
-    description: "Software Support Specialist at Brock Solutions | MSc Advanced Computer Science (Merit) | QMUL",
+    title: "Amritpal Singh Kaur | Software Support & Customer Success",
+    description: "Software Support Specialist & Customer Success Manager (airline account) | MSc Advanced Computer Science (Merit) | QMUL",
     creator: "@Amrit004",
     images: ["https://apsk-dev.vercel.app/og-image.png"],
   },
@@ -62,7 +62,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Amritpal Singh Kaur",
               "url": "https://apsk-dev.vercel.app",
-              "jobTitle": "Onsite Software Support Specialist",
+              "jobTitle": "Software Support Specialist & Customer Success Manager",
               "email": "ap.singhkaur@gmail.com",
               "address": {
                 "@type": "PostalAddress",
@@ -71,7 +71,7 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://github.com/Amrit004",
-                "https://linkedin.com/in/amritpal-singh-kaur-b54b9a1b1"
+                "https://www.linkedin.com/in/amritpal-singh-kaur-b54b9a1b1"
               ],
               "alumniOf": [
                 {
@@ -91,7 +91,7 @@ export default function RootLayout({
                 { "@type": "Organization", "name": "Amadeus" },
                 { "@type": "Organization", "name": "ENI" }
               ],
-              "knowsAbout": ["JavaScript", "TypeScript", "Python", "Java", "React", "Node.js", "AWS", "Azure", "Windows Server", "SQL", "Incident Management", "Root Cause Analysis", "Baggage Handling Systems", "Cloud Security", "Cybersecurity"]
+              "knowsAbout": ["JavaScript", "TypeScript", "Python", "Java", "React", "Node.js", "AWS", "Azure", "Windows Server", "SQL", "Incident Management", "Root Cause Analysis", "Customer Success", "Stakeholder Management", "SLA Management", "Airline Operations", "Baggage Handling Systems", "Cloud Security", "Cybersecurity"]
             })
           }}
         />
