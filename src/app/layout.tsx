@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Amritpal Singh Kaur | Graduate Software Engineer",
-  description: "Multilingual Graduate Software Engineer with enterprise experience at Bank of America, Amadeus & ENI. MSc Advanced CS at QMUL. Open to work Summer 2026.",
+  description: "Multilingual Graduate Software Engineer with enterprise experience at Bank of America, Amadeus & ENI. MSc Advanced CS graduate (Merit) from QMUL. Open to work.",
   keywords: ["Software Engineer", "Graduate Developer", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "Full Stack", "Cloud", "Cybersecurity", "React", "Next.js", "Python", "Java"],
   authors: [{ name: "Amritpal Singh Kaur" }],
   creator: "Amritpal Singh Kaur",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
-    description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc candidate in Advanced CS.",
+    description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc Advanced CS graduate with Merit.",
     url: "https://apsk-dev.vercel.app",
     siteName: "APSK Portfolio",
     locale: "en_GB",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amritpal Singh Kaur | Graduate Software Engineer",
-    description: "Multilingual Graduate Software Engineer - Open to Work Summer 2026",
+    description: "Multilingual Graduate Software Engineer - MSc Advanced CS (Merit) - Open to Work",
     creator: "@Amrit004",
     images: ["https://apsk-dev.vercel.app/og-image.png"],
   },
@@ -77,7 +77,7 @@ export default function RootLayout({
                 {
                   "@type": "EducationalOrganization",
                   "name": "Queen Mary University of London",
-                  "description": "MSc Advanced Computer Science"
+                  "description": "MSc Advanced Computer Science (Merit)"
                 },
                 {
                   "@type": "EducationalOrganization",

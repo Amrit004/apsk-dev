@@ -17,7 +17,7 @@
 
 ---
 
-A modern, professional portfolio website showcasing enterprise experience at Bank of America, Amadeus & ENI, along with MSc Security & Authentication from Queen Mary University of London.
+A modern, professional portfolio website showcasing enterprise experience at Bank of America, Amadeus & ENI, along with a completed MSc Advanced Computer Science (Merit) from Queen Mary University of London.
 
 ## 🚀 Features
 

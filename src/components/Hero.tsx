@@ -10,7 +10,7 @@ export default function Hero() {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Amritpal Singh Kaur</h1>
             <p className="text-xl text-slate-300 mb-2">Onsite Software Support Specialist @ Brock Solutions | Heathrow Airport</p>
-            <p className="text-slate-400 mb-6">MSc Advanced Computer Science – Queen Mary University of London (2026)</p>
+            <p className="text-slate-400 mb-6">MSc Advanced Computer Science (Merit) – Queen Mary University of London (2026)</p>
             <div className="flex flex-wrap gap-3 mb-8">
               <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900">Contact Me</a>
               <a href={SOCIAL_LINKS.cv} download="Amritpal-Singh-Kaur-CV.pdf" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white font-medium transition-colors"><Download className="w-4 h-4" />Download CV</a>

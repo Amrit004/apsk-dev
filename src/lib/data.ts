@@ -4,7 +4,7 @@ import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarC
 export const HIGHLIGHTS = [
   { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions + Manpower (Zoom IT): BOA, Amadeus & ENI" },
   { icon: Globe, title: "Languages", description: "English, Spanish, Catalan, Punjabi, Hindi" },
-  { icon: GraduationCap, title: "Education", description: "MSc QMUL, BSc Staffordshire (2:1)" },
+  { icon: GraduationCap, title: "Education", description: "MSc QMUL (Merit), BSc Staffordshire (2:1)" },
   { icon: Code2, title: "Repositories", description: "11 public projects on GitHub" },
 ] as const;
 
@@ -34,7 +34,7 @@ export const EDUCATION = [
     school: "Queen Mary University of London",
     degree: "MSc Advanced Computer Science",
     period: "2025 - 2026",
-    grade: "In Progress (Expected Merit)",
+    grade: "Completed - Merit",
     modules: "Cloud Architecture, Machine Learning, Security & Auth, Data Analytics, Distributed Systems",
   },
   {

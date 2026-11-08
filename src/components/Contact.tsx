@@ -27,7 +27,7 @@ export default function Contact() {
             </div>
             <div className="card">
               <h3 className="font-semibold text-white mb-2">Currently</h3>
-              <p className="text-slate-400 text-sm">Onsite Software Support Specialist at Brock Solutions, based at Heathrow Airport. Open to connecting.</p>
+              <p className="text-slate-400 text-sm">Onsite Software Support Specialist at Brock Solutions, based at Heathrow Airport. MSc Advanced Computer Science graduate (Merit). Open to connecting.</p>
             </div>
           </div>
           <div className="card">
