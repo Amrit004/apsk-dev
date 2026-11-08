@@ -113,7 +113,7 @@ export const EXPERIENCE: Array<{
             "Travelled on-site to Mexico and Spain to train airline and airport staff on the system.",
             "Delivered training in Spanish, teaching users how the product works and answering their questions and concerns directly.",
             "Helped local teams feel confident using the system, adapting explanations to different user needs and levels of technical knowledge.",
-            "Acted as the on-the-ground point of contact during the rollout, making sure staff knew who to ask when they needed help.",
+            "Acted as the on-site point of contact for customer concerns during the rollout, resolving issues quickly and keeping local teams informed.",
           ],
         },
       ],
