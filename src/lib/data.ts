@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal } from "lucide-react";
+import { Briefcase, Globe, GraduationCap, Code2, Shield, Lock, Wifi, Plane, BarChart, Code, Database, Bot, FileCode, Code as CodeIcon, Database as DBIcon, Cloud, Shield as ShieldIcon, Palette, Terminal, Wrench } from "lucide-react";
 
 export const HIGHLIGHTS = [
   { icon: Briefcase, title: "Enterprise Experience", description: "Brock Solutions + Manpower (Zoom IT): BOA, Amadeus & ENI" },
@@ -9,10 +9,12 @@ export const HIGHLIGHTS = [
 ] as const;
 
 export const KEY_STRENGTHS = [
+  "Enterprise software support and incident resolution in 24/7, SLA-driven environments",
+  "Root cause analysis using application logs, SQL queries, and system diagnostics",
+  "Windows Server, Azure, SQL databases, and industrial automation systems",
   "Full-stack development with JavaScript, TypeScript, and Python",
-  "Cloud infrastructure and deployment using AWS and Docker",
-  "Security-focused approach with experience in regulated environments",
-  "Real-time operations support and incident management in mission-critical airport environments",
+  "Security-focused delivery across regulated finance, travel, and energy environments",
+  "Customer-facing communication in five languages",
 ] as const;
 
 export const SOCIAL_LINKS = {
@@ -126,6 +128,7 @@ export const SKILLS = [
   { icon: DBIcon, title: "Databases", skills: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "SQL Server"] },
   { icon: Cloud, title: "Cloud & DevOps", skills: ["AWS (EC2, S3, Lambda)", "Azure", "Docker", "Linux", "Windows Server", "CI/CD", "Vercel"] },
   { icon: ShieldIcon, title: "Security", skills: ["Network Security", "IAM", "JWT", "OAuth", "Cryptography"] },
+  { icon: Wrench, title: "Support & Operations", skills: ["Incident Management", "Root Cause Analysis", "Log Analysis", "SQL Diagnostics", "SLA Management", "SmartSuite / BHS", "Multi-terminal Networks", "IATA Resolution 753"] },
   { icon: Palette, title: "Tools & Methods", skills: ["Git", "GitHub", "Agile/Scrum", "JIRA", "Figma", "Postman", "Industrial Automation"] },
 ] as const;
 

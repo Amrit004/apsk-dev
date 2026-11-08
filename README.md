@@ -7,7 +7,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-FF0055?style=for-the-badge&logo=framer&logoColor=white)
 
-**Professional Portfolio for Amritpal Singh Kaur — Graduate Software Engineer**
+**Professional Portfolio for Amritpal Singh Kaur — Software Support Specialist & MSc Graduate**
 
 [Live Portfolio](https://apsk-dev.vercel.app) · [LinkedIn](https://linkedin.com/in/amritpal-singh-kaur-b54b9a1b1) · [GitHub](https://github.com/Amrit004)
 

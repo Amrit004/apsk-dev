@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Amritpal Singh Kaur | Graduate Software Engineer",
-  description: "Multilingual Graduate Software Engineer with enterprise experience at Bank of America, Amadeus & ENI. MSc Advanced CS graduate (Merit) from QMUL. Open to work.",
-  keywords: ["Software Engineer", "Graduate Developer", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "Full Stack", "Cloud", "Cybersecurity", "React", "Next.js", "Python", "Java"],
+  title: "Amritpal Singh Kaur | Software Support Specialist",
+  description: "Software Support Specialist at Brock Solutions (Heathrow) with enterprise IT experience at Bank of America, Amadeus & ENI. MSc Advanced Computer Science graduate (Merit), Queen Mary University of London.",
+  keywords: ["Software Support Specialist", "IT Support Engineer", "Incident Management", "Brock Solutions", "SmartSuite", "Heathrow", "Bank of America", "Amadeus", "ENI", "QMUL", "London", "SQL", "Azure", "Windows Server", "JavaScript", "TypeScript", "Python", "React", "Next.js", "Cybersecurity"],
   authors: [{ name: "Amritpal Singh Kaur" }],
   creator: "Amritpal Singh Kaur",
   publisher: "Amritpal Singh Kaur",
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: "Amritpal Singh Kaur | Graduate Software Engineer",
-    description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc Advanced CS graduate with Merit.",
+    title: "Amritpal Singh Kaur | Software Support Specialist",
+    description: "Onsite Software Support Specialist at Brock Solutions, Heathrow, supporting mission-critical baggage systems. MSc Advanced Computer Science graduate (Merit), QMUL.",
     url: "https://apsk-dev.vercel.app",
     siteName: "APSK Portfolio",
     locale: "en_GB",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amritpal Singh Kaur | Graduate Software Engineer",
-    description: "Multilingual Graduate Software Engineer - MSc Advanced CS (Merit) - Open to Work",
+    title: "Amritpal Singh Kaur | Software Support Specialist",
+    description: "Software Support Specialist at Brock Solutions | MSc Advanced Computer Science (Merit) | QMUL",
     creator: "@Amrit004",
     images: ["https://apsk-dev.vercel.app/og-image.png"],
   },
@@ -91,7 +91,7 @@ export default function RootLayout({
                 { "@type": "Organization", "name": "Amadeus" },
                 { "@type": "Organization", "name": "ENI" }
               ],
-              "knowsAbout": ["JavaScript", "TypeScript", "Python", "Java", "React", "Node.js", "AWS", "Cloud Security", "Cybersecurity"]
+              "knowsAbout": ["JavaScript", "TypeScript", "Python", "Java", "React", "Node.js", "AWS", "Azure", "Windows Server", "SQL", "Incident Management", "Root Cause Analysis", "Baggage Handling Systems", "Cloud Security", "Cybersecurity"]
             })
           }}
         />
