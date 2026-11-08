@@ -17,6 +17,11 @@ export default function Projects() {
   const [filter, setFilter] = useState<string>("All");
   const [selected, setSelected] = useState<Project | null>(null);
 
+  const groups = useMemo(
+    () => CATEGORY_GROUPS.filter((g) => g.label === "All" || PROJECTS.some((p) => g.match(p.category))),
+    []
+  );
+
   const filtered = useMemo(
     () => PROJECTS.filter((p) => CATEGORY_GROUPS.find((g) => g.label === filter)?.match(p.category)),
     [filter]
@@ -47,10 +52,10 @@ export default function Projects() {
       <section id="projects" className="py-16 bg-slate-950" aria-labelledby="projects-heading">
         <div className="max-w-6xl mx-auto px-6">
           <h2 id="projects-heading" className="text-2xl font-bold text-white mb-2">Projects</h2>
-          <p className="text-slate-400 mb-6">Selected projects showcasing skills in security, AI/ML, full-stack development, and cloud computing.</p>
+          <p className="text-slate-400 mb-6">Selected projects showcasing skills in security, data analytics, and formal verification.</p>
 
           <div className="flex flex-wrap gap-2 mb-8" role="group" aria-label="Filter projects by category">
-            {CATEGORY_GROUPS.map((g) => (
+            {groups.map((g) => (
               <button
                 key={g.label}
                 onClick={() => setFilter(g.label)}
